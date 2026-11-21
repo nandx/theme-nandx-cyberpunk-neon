@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms &amp; Inputs — NandX Cyberpunk Neon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layouts.css">
+</head>
+<body>
+  <div class="nx-app">
+    <aside class="nx-sidebar" data-nx-sidebar aria-label="Dashboard navigation">
+      <a href="index.html" class="nx-brand"><span class="nx-dot nx-dot--pulse" aria-hidden="true"></span><span>NAND<span class="nx-brand__accent">X</span> HUD</span></a>
+      <div class="nx-sidebar__group">
+        <div class="nx-sidebar__title">Core</div>
+        <ul class="nx-sidebar__nav">
+          <li><a href="dashboard.html" class="nx-sidebar__link">Dashboard</a></li>
+          <li><a href="widgets.html" class="nx-sidebar__link">Widgets</a></li>
+          <li><a href="charts.html" class="nx-sidebar__link">Charts</a></li>
+          <li><a href="tables.html" class="nx-sidebar__link">Data Tables</a></li>
+          <li><a href="forms.html" class="nx-sidebar__link is-active">Forms</a></li>
+          <li><a href="task-board.html" class="nx-sidebar__link">Task Board</a></li>
+        </ul>
+      </div>
+      <div class="nx-sidebar__group">
+        <div class="nx-sidebar__title">Operations</div>
+        <ul class="nx-sidebar__nav">
+          <li><a href="invoice.html" class="nx-sidebar__link">Invoice</a></li>
+          <li><a href="search-result.html" class="nx-sidebar__link">Search Results</a></li>
+          <li><a href="alerts.html" class="nx-sidebar__link">Alerts</a></li>
+          <li><a href="animations.html" class="nx-sidebar__link">Animations</a></li>
+          <li><a href="breadcrumbs.html" class="nx-sidebar__link">Breadcrumbs</a></li>
+          <li><a href="buttons.html" class="nx-sidebar__link">Buttons</a></li>
+          <li><a href="modals.html" class="nx-sidebar__link">Modals</a></li>
+          <li><a href="progress-bar.html" class="nx-sidebar__link">Progress Bars</a></li>
+          <li><a href="components.html" class="nx-sidebar__link">UI Kit</a></li>
+        </ul>
+      </div>
+      <div class="nx-sidebar__group">
+        <div class="nx-sidebar__title">Account &amp; System</div>
+        <ul class="nx-sidebar__nav">
+          <li><a href="profile.html" class="nx-sidebar__link">Profile</a></li>
+          <li><a href="login.html" class="nx-sidebar__link">Login</a></li>
+          <li><a href="reset-password.html" class="nx-sidebar__link">Reset Password</a></li>
+          <li><a href="coming-soon.html" class="nx-sidebar__link">Coming Soon</a></li>
+          <li><a href="error.html" class="nx-sidebar__link">Error Page</a></li>
+          <li><a href="404.html" class="nx-sidebar__link">404 Error</a></li>
+          <li><a href="500.html" class="nx-sidebar__link">500 Error</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="nx-app__content">
+      <header class="nx-topbar">
+        <div class="nx-flex nx-items-center nx-gap-3">
+          <button type="button" class="nx-btn nx-btn--ghost nx-btn--icon nx-sidebar-toggle" data-nx-sidebar-toggle aria-expanded="false" aria-label="Toggle sidebar">&#9776;</button>
+          <span class="nx-hud-label">INPUT PROTOCOLS // FORMS</span>
+        </div>
+        <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-toggle-scanlines>FX: Scanline</button>
+      </header>
+
+      <main class="nx-main">
+        <h1 class="nx-mb-2">Form Layouts &amp; Controls</h1>
+        <p class="nx-mb-6">Single/multi-column forms, validation states, switches, range sliders, ratings, and file upload.</p>
+
+        <form class="nx-grid nx-gap-6" onsubmit="event.preventDefault();">
+          <section class="nx-card">
+            <div class="nx-card__header"><h2 class="nx-card__title">Node Configuration</h2></div>
+            <div class="nx-card__body nx-grid-2">
+              <div class="nx-field">
+                <label class="nx-label" for="node-name">Node Identifier</label>
+                <input id="node-name" type="text" class="nx-input is-valid" value="NX-TOKYO-09">
+                <span class="nx-help nx-help--valid">Identifier available in cluster.</span>
+              </div>
+
+              <div class="nx-field">
+                <label class="nx-label" for="node-port">Relay Port</label>
+                <input id="node-port" type="number" class="nx-input is-invalid" value="80">
+                <span class="nx-help nx-help--invalid">Port 80 is reserved; use >= 8000.</span>
+              </div>
+
+              <div class="nx-field">
+                <label class="nx-label" for="node-region">Cluster Region</label>
+                <select id="node-region" class="nx-select">
+                  <option>Neo-Tokyo (JP-EAST)</option>
+                  <option>Night City (US-WEST)</option>
+                  <option>Berlin Grid (EU-CENTRAL)</option>
+                </select>
+              </div>
+
+              <div class="nx-field">
+                <label class="nx-label" for="node-endpoint">API Endpoint</label>
+                <div class="nx-input-group">
+                  <span class="nx-input-group__addon">https://</span>
+                  <input id="node-endpoint" type="text" class="nx-input" placeholder="edge.nandx.io/v2">
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="nx-grid-2">
+            <div class="nx-card">
+              <div class="nx-card__header"><h2 class="nx-card__title">Switches, Sliders &amp; Rating</h2></div>
+              <div class="nx-card__body nx-grid nx-gap-4">
+                <label class="nx-switch">
+                  <input type="checkbox" checked>
+                  <span>Enable Zero-Trust Firewall</span>
+                </label>
+
+                <label class="nx-check">
+                  <input type="checkbox" checked>
+                  <span>Auto-rotate encryption keys every 24h</span>
+                </label>
+
+                <div class="nx-field">
+                  <label class="nx-label" for="power-range">Bandwidth Cap (Gbps)</label>
+                  <input id="power-range" type="range" class="nx-range" min="1" max="100" value="65">
+                </div>
+
+                <div class="nx-field">
+                  <span class="nx-label">Priority Rating</span>
+                  <div class="nx-rating">
+                    <input type="radio" id="r5" name="rating" value="5"><label for="r5" title="5 stars">&#9733;</label>
+                    <input type="radio" id="r4" name="rating" value="4" checked><label for="r4" title="4 stars">&#9733;</label>
+                    <input type="radio" id="r3" name="rating" value="3"><label for="r3" title="3 stars">&#9733;</label>
+                    <input type="radio" id="r2" name="rating" value="2"><label for="r2" title="2 stars">&#9733;</label>
+                    <input type="radio" id="r1" name="rating" value="1"><label for="r1" title="1 star">&#9733;</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="nx-card">
+              <div class="nx-card__header"><h2 class="nx-card__title">Payload Upload &amp; Notes</h2></div>
+              <div class="nx-card__body">
+                <div class="nx-field">
+                  <label class="nx-label">Firmware Dropzone</label>
+                  <div class="nx-dropzone" data-nx-dropzone>
+                    <input type="file" aria-label="Upload firmware file">
+                    <strong class="nx-text-cyan">DROP PAYLOAD OR CLICK TO BROWSE</strong>
+                    <span class="nx-mono nx-text-secondary" data-nx-dropzone-label>Supports .bin, .json, .pem (Max 25MB)</span>
+                  </div>
+                </div>
+
+                <div class="nx-field">
+                  <label class="nx-label" for="notes">Deployment Notes</label>
+                  <textarea id="notes" class="nx-textarea" rows="3" placeholder="Enter mission parameters..."></textarea>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="nx-flex nx-justify-between nx-items-center">
+            <button type="reset" class="nx-btn nx-btn--ghost">Reset Fields</button>
+            <button type="submit" class="nx-btn nx-btn--primary" data-nx-toast="Configuration saved to node.">Save Configuration</button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

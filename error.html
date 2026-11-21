@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Error — NandX Cyberpunk Neon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layouts.css">
+</head>
+<body>
+  <main class="nx-center-shell">
+    <section class="nx-card nx-card--hud nx-auth-card">
+      <div class="nx-card__header">
+        <span class="nx-hud-label"><span class="nx-dot nx-dot--amber nx-dot--pulse" aria-hidden="true"></span> ERR_ACCESS_FAULT</span>
+        <span class="nx-badge nx-badge--amber">ERROR</span>
+      </div>
+      <div class="nx-card__body">
+        <h1 class="nx-glitch nx-text-glow-cyan">SYSTEM EXCEPTION</h1>
+        <p>An unexpected protocol exception interrupted the current request. Verify your permissions or retry the operation.</p>
+        <pre class="nx-code-block nx-mb-6"><code>$ status --check-request
+[WARN] Code: ERR_INVALID_HANDSHAKE
+[HINT] Refresh session token or return home<span class="nx-cursor" aria-hidden="true"></span></code></pre>
+        <div class="nx-flex nx-flex-wrap nx-gap-3">
+          <a href="index.html" class="nx-btn nx-btn--primary">Back to Home</a>
+          <a href="dashboard.html" class="nx-btn nx-btn--ghost">Open Dashboard</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

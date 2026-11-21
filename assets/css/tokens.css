@@ -1,0 +1,82 @@
+/* ==========================================================================
+   NandX Cyberpunk Neon — Design Tokens
+   All custom properties are prefixed with --nx- for safe portability.
+   ========================================================================== */
+
+:root {
+  /* Surfaces & Backgrounds */
+  --nx-bg-void: #06070d;
+  --nx-bg-surface: #0d101b;
+  --nx-bg-elevated: #14192b;
+  --nx-bg-glass: rgba(13, 16, 27, 0.82);
+  --nx-bg-input: #090b14;
+
+  /* Text Hierarchy */
+  --nx-text-primary: #e8f0ff;
+  --nx-text-secondary: #94a3c4;
+  --nx-text-muted: #647499;
+  --nx-text-inverse: #06070d;
+
+  /* Neon Accents & Semantic States */
+  --nx-cyan: #00f0ff;
+  --nx-cyan-dim: rgba(0, 240, 255, 0.14);
+  --nx-magenta: #ff2a85;
+  --nx-magenta-dim: rgba(255, 42, 133, 0.14);
+  --nx-lime: #39ff14;
+  --nx-lime-dim: rgba(57, 255, 20, 0.14);
+  --nx-amber: #ffb800;
+  --nx-amber-dim: rgba(255, 184, 0, 0.14);
+  --nx-danger: #ff3b5c;
+  --nx-danger-dim: rgba(255, 59, 92, 0.14);
+
+  /* Borders & Glows */
+  --nx-border-subtle: rgba(0, 240, 255, 0.18);
+  --nx-border-muted: rgba(148, 163, 196, 0.18);
+  --nx-border-strong: rgba(0, 240, 255, 0.6);
+  --nx-border-magenta: rgba(255, 42, 133, 0.55);
+  --nx-glow-cyan: 0 0 12px rgba(0, 240, 255, 0.35), 0 0 28px rgba(0, 240, 255, 0.12);
+  --nx-glow-magenta: 0 0 12px rgba(255, 42, 133, 0.35), 0 0 28px rgba(255, 42, 133, 0.12);
+  --nx-glow-lime: 0 0 12px rgba(57, 255, 20, 0.32), 0 0 24px rgba(57, 255, 20, 0.1);
+  --nx-glow-danger: 0 0 12px rgba(255, 59, 92, 0.35), 0 0 24px rgba(255, 59, 92, 0.12);
+
+  /* Typography */
+  --nx-font-display: 'Orbitron', 'Rajdhani', system-ui, sans-serif;
+  --nx-font-body: 'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif;
+  --nx-font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, monospace;
+
+  /* Spacing Scale */
+  --nx-space-1: 0.25rem;
+  --nx-space-2: 0.5rem;
+  --nx-space-3: 0.75rem;
+  --nx-space-4: 1rem;
+  --nx-space-5: 1.25rem;
+  --nx-space-6: 1.5rem;
+  --nx-space-8: 2rem;
+  --nx-space-10: 2.5rem;
+  --nx-space-12: 3rem;
+  --nx-space-16: 4rem;
+
+  /* Radii & HUD Chamfers */
+  --nx-radius-xs: 2px;
+  --nx-radius-sm: 4px;
+  --nx-radius-md: 6px;
+  --nx-chamfer-sm: polygon(0 6px, 6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%);
+  --nx-chamfer-md: polygon(0 10px, 10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+  --nx-chamfer-lg: polygon(0 16px, 16px 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);
+
+  /* Motion */
+  --nx-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --nx-duration-fast: 150ms;
+  --nx-duration-base: 220ms;
+
+  /* Layout & Z-Index */
+  --nx-container-max: 1280px;
+  --nx-navbar-h: 64px;
+  --nx-sidebar-w: 256px;
+  --nx-z-base: 1;
+  --nx-z-sticky: 20;
+  --nx-z-drawer: 40;
+  --nx-z-modal: 60;
+  --nx-z-toast: 80;
+  --nx-z-scanline: 90;
+}

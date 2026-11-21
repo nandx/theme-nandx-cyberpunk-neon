@@ -1,0 +1,327 @@
+/* ==========================================================================
+   NandX Cyberpunk Neon — Page Layouts (Navbar, Sidebar, Shells, Print)
+   ========================================================================== */
+
+/* --- Sticky Glass HUD Navbar --- */
+.nx-navbar {
+  position: sticky;
+  top: 0;
+  z-index: var(--nx-z-sticky);
+  height: var(--nx-navbar-h);
+  background: var(--nx-bg-glass);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--nx-border-subtle);
+}
+
+.nx-navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--nx-space-4);
+  height: 100%;
+}
+
+.nx-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--nx-space-2);
+  font-family: var(--nx-font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--nx-text-primary);
+}
+
+.nx-brand__accent {
+  color: var(--nx-cyan);
+}
+
+.nx-nav-links {
+  display: none;
+  align-items: center;
+  gap: var(--nx-space-5);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nx-nav-links a {
+  font-family: var(--nx-font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--nx-text-secondary);
+}
+
+.nx-nav-links a:hover,
+.nx-nav-links a.is-active {
+  color: var(--nx-cyan);
+}
+
+.nx-nav-toggle {
+  display: inline-flex;
+}
+
+@media (min-width: 960px) {
+  .nx-nav-links {
+    display: flex;
+  }
+
+  .nx-nav-toggle {
+    display: none;
+  }
+}
+
+/* Mobile Nav Drawer */
+.nx-mobile-drawer {
+  display: none;
+  position: fixed;
+  inset: var(--nx-navbar-h) 0 0 0;
+  padding: var(--nx-space-6) var(--nx-space-4);
+  background: rgba(6, 7, 13, 0.96);
+  backdrop-filter: blur(14px);
+  border-top: 1px solid var(--nx-border-subtle);
+  z-index: var(--nx-z-drawer);
+  overflow-y: auto;
+}
+
+.nx-mobile-drawer.is-open {
+  display: block;
+}
+
+.nx-mobile-drawer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--nx-space-3);
+}
+
+.nx-mobile-drawer a {
+  display: block;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--nx-border-muted);
+  font-family: var(--nx-font-mono);
+  font-size: 0.88rem;
+  color: var(--nx-text-primary);
+}
+
+/* --- Dashboard / App Shell --- */
+.nx-app {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+}
+
+.nx-sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: var(--nx-sidebar-w);
+  padding: var(--nx-space-5) var(--nx-space-4);
+  background: var(--nx-bg-surface);
+  border-right: 1px solid var(--nx-border-subtle);
+  transform: translateX(-100%);
+  transition: transform var(--nx-duration-base) var(--nx-ease);
+  z-index: var(--nx-z-drawer);
+  overflow-y: auto;
+}
+
+.nx-sidebar.is-open {
+  transform: translateX(0);
+}
+
+.nx-sidebar__group {
+  margin-top: var(--nx-space-6);
+}
+
+.nx-sidebar__title {
+  margin-bottom: var(--nx-space-2);
+  padding-inline: var(--nx-space-3);
+  font-family: var(--nx-font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--nx-text-muted);
+}
+
+.nx-sidebar__nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.nx-sidebar__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 0.75rem;
+  border-left: 2px solid transparent;
+  color: var(--nx-text-secondary);
+  font-size: 0.9rem;
+  transition:
+    color var(--nx-duration-fast) var(--nx-ease),
+    background var(--nx-duration-fast) var(--nx-ease),
+    border-color var(--nx-duration-fast) var(--nx-ease);
+}
+
+.nx-sidebar__link:hover,
+.nx-sidebar__link.is-active {
+  color: var(--nx-cyan);
+  background: rgba(0, 240, 255, 0.08);
+  border-left-color: var(--nx-cyan);
+}
+
+.nx-app__content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.nx-topbar {
+  position: sticky;
+  top: 0;
+  z-index: var(--nx-z-sticky);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--nx-space-3);
+  height: var(--nx-navbar-h);
+  padding-inline: var(--nx-space-4);
+  background: var(--nx-bg-glass);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--nx-border-subtle);
+}
+
+.nx-main {
+  flex: 1;
+  padding: var(--nx-space-6) var(--nx-space-4);
+}
+
+@media (min-width: 1024px) {
+  .nx-app {
+    grid-template-columns: var(--nx-sidebar-w) 1fr;
+  }
+
+  .nx-sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    transform: none;
+  }
+
+  .nx-sidebar-toggle {
+    display: none;
+  }
+
+  .nx-main {
+    padding: var(--nx-space-6);
+  }
+}
+
+/* --- Centered Auth / Error / Coming Soon Shell --- */
+.nx-center-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--nx-space-6) var(--nx-space-4);
+}
+
+.nx-auth-card {
+  width: 100%;
+  max-width: 440px;
+}
+
+/* --- Hero Section --- */
+.nx-hero {
+  padding-block: var(--nx-space-12);
+  border-bottom: 1px solid var(--nx-border-subtle);
+}
+
+.nx-hero__grid {
+  display: grid;
+  gap: var(--nx-space-8);
+  align-items: center;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 960px) {
+  .nx-hero__grid {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+}
+
+/* --- Countdown Grid --- */
+.nx-countdown {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--nx-space-3);
+}
+
+@media (min-width: 540px) {
+  .nx-countdown {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.nx-countdown__box {
+  padding: var(--nx-space-4);
+  background: var(--nx-bg-surface);
+  border: 1px solid var(--nx-border-strong);
+  text-align: center;
+  clip-path: var(--nx-chamfer-sm);
+}
+
+.nx-countdown__num {
+  display: block;
+  font-family: var(--nx-font-display);
+  font-size: 2rem;
+  color: var(--nx-cyan);
+}
+
+/* --- Footer --- */
+.nx-footer {
+  padding-block: var(--nx-space-8);
+  border-top: 1px solid var(--nx-border-subtle);
+  background: rgba(6, 7, 13, 0.85);
+}
+
+/* --- Print Styles (Invoice) --- */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  body.nx-scanlines::after,
+  .nx-sidebar,
+  .nx-topbar,
+  .nx-no-print {
+    display: none !important;
+  }
+
+  .nx-app {
+    display: block !important;
+  }
+
+  .nx-card {
+    border-color: #cccccc !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+  }
+
+  .nx-table th {
+    background: #eeeeee !important;
+    color: #111111 !important;
+  }
+
+  .nx-table td {
+    color: #111111 !important;
+  }
+}

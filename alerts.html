@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alerts &amp; Notifications — NandX Cyberpunk Neon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layouts.css">
+</head>
+<body>
+  <div class="nx-app">
+    <aside class="nx-sidebar" data-nx-sidebar aria-label="Dashboard navigation">
+      <a href="index.html" class="nx-brand"><span class="nx-dot nx-dot--pulse" aria-hidden="true"></span><span>NAND<span class="nx-brand__accent">X</span> HUD</span></a>
+      <div class="nx-sidebar__group">
+        <div class="nx-sidebar__title">Core</div>
+        <ul class="nx-sidebar__nav">
+          <li><a href="dashboard.html" class="nx-sidebar__link">Dashboard</a></li>
+          <li><a href="widgets.html" class="nx-sidebar__link">Widgets</a></li>
+          <li><a href="charts.html" class="nx-sidebar__link">Charts</a></li>
+          <li><a href="tables.html" class="nx-sidebar__link">Data Tables</a></li>
+          <li><a href="forms.html" class="nx-sidebar__link">Forms</a></li>
+          <li><a href="task-board.html" class="nx-sidebar__link">Task Board</a></li>
+        </ul>
+      </div>
+      <div class="nx-sidebar__group">
+        <div class="nx-sidebar__title">Operations</div>
+        <ul class="nx-sidebar__nav">
+          <li><a href="invoice.html" class="nx-sidebar__link">Invoice</a></li>
+          <li><a href="search-result.html" class="nx-sidebar__link">Search Results</a></li>
+          <li><a href="alerts.html" class="nx-sidebar__link is-active">Alerts</a></li>
+          <li><a href="animations.html" class="nx-sidebar__link">Animations</a></li>
+          <li><a href="breadcrumbs.html" class="nx-sidebar__link">Breadcrumbs</a></li>
+          <li><a href="buttons.html" class="nx-sidebar__link">Buttons</a></li>
+          <li><a href="modals.html" class="nx-sidebar__link">Modals</a></li>
+          <li><a href="progress-bar.html" class="nx-sidebar__link">Progress Bars</a></li>
+          <li><a href="components.html" class="nx-sidebar__link">UI Kit</a></li>
+        </ul>
+      </div>
+      <div class="nx-sidebar__group">
+        <div class="nx-sidebar__title">Account &amp; System</div>
+        <ul class="nx-sidebar__nav">
+          <li><a href="profile.html" class="nx-sidebar__link">Profile</a></li>
+          <li><a href="login.html" class="nx-sidebar__link">Login</a></li>
+          <li><a href="reset-password.html" class="nx-sidebar__link">Reset Password</a></li>
+          <li><a href="coming-soon.html" class="nx-sidebar__link">Coming Soon</a></li>
+          <li><a href="error.html" class="nx-sidebar__link">Error Page</a></li>
+          <li><a href="404.html" class="nx-sidebar__link">404 Error</a></li>
+          <li><a href="500.html" class="nx-sidebar__link">500 Error</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="nx-app__content">
+      <header class="nx-topbar">
+        <div class="nx-flex nx-items-center nx-gap-3">
+          <button type="button" class="nx-btn nx-btn--ghost nx-btn--icon nx-sidebar-toggle" data-nx-sidebar-toggle aria-expanded="false" aria-label="Toggle sidebar">&#9776;</button>
+          <span class="nx-hud-label">FEEDBACK // ALERTS &amp; TOASTS</span>
+        </div>
+        <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-toggle-scanlines>FX: Scanline</button>
+      </header>
+
+      <main class="nx-main">
+        <ul class="nx-breadcrumb">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li>Alerts</li>
+        </ul>
+
+        <h1 class="nx-mb-2">Alerts &amp; Notifications</h1>
+        <p class="nx-mb-6">Static status banners, dismissible system alerts, and floating toast notifications.</p>
+
+        <div class="nx-grid-2 nx-mb-6">
+          <section class="nx-card">
+            <div class="nx-card__header"><h2 class="nx-card__title">Standard Alerts</h2></div>
+            <div class="nx-card__body nx-grid nx-gap-3">
+              <div class="nx-alert" role="status">
+                <div>
+                  <strong class="nx-alert__title">System Info</strong>
+                  <p class="nx-alert__desc">Telemetry link synchronized with Neo-Tokyo Node 04.</p>
+                </div>
+              </div>
+              <div class="nx-alert nx-alert--lime" role="status">
+                <div>
+                  <strong class="nx-alert__title">Deployment Verified</strong>
+                  <p class="nx-alert__desc">All security checksums passed with zero warnings.</p>
+                </div>
+              </div>
+              <div class="nx-alert nx-alert--amber" role="alert">
+                <div>
+                  <strong class="nx-alert__title">High Latency</strong>
+                  <p class="nx-alert__desc">Relay sector 7 experiencing packet jitter (68ms).</p>
+                </div>
+              </div>
+              <div class="nx-alert nx-alert--danger" role="alert">
+                <div>
+                  <strong class="nx-alert__title">Firewall Breach</strong>
+                  <p class="nx-alert__desc">Unauthorized handshake detected on port 9042.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="nx-card">
+            <div class="nx-card__header"><h2 class="nx-card__title">Dismissible Alerts</h2></div>
+            <div class="nx-card__body nx-grid nx-gap-3">
+              <div class="nx-alert" role="status">
+                <div>
+                  <strong class="nx-alert__title">Patch Available</strong>
+                  <p class="nx-alert__desc">Firmware v2.4.1 is ready for cluster rollout.</p>
+                </div>
+                <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-dismiss aria-label="Dismiss alert">X</button>
+              </div>
+              <div class="nx-alert nx-alert--lime" role="status">
+                <div>
+                  <strong class="nx-alert__title">Backup Complete</strong>
+                  <p class="nx-alert__desc">Snapshot archived to cold storage vault.</p>
+                </div>
+                <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-dismiss aria-label="Dismiss alert">X</button>
+              </div>
+              <div class="nx-alert nx-alert--amber" role="alert">
+                <div>
+                  <strong class="nx-alert__title">Key Expiring</strong>
+                  <p class="nx-alert__desc">API token expires in 48 hours. Rotate soon.</p>
+                </div>
+                <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-dismiss aria-label="Dismiss alert">X</button>
+              </div>
+              <div class="nx-alert nx-alert--danger" role="alert">
+                <div>
+                  <strong class="nx-alert__title">Node Offline</strong>
+                  <p class="nx-alert__desc">LA-Sector-7 failed 3 consecutive health checks.</p>
+                </div>
+                <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-dismiss aria-label="Dismiss alert">X</button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="nx-card">
+          <div class="nx-card__header"><h2 class="nx-card__title">Floating Toast Notifications</h2><span class="nx-badge">LIVE JS</span></div>
+          <div class="nx-card__body nx-flex nx-flex-wrap nx-gap-3">
+            <button type="button" class="nx-btn nx-btn--primary" data-nx-toast="Telemetry synchronized successfully.">Info Toast</button>
+            <button type="button" class="nx-btn nx-btn--magenta" data-nx-toast="Override protocol activated.">Magenta Toast</button>
+            <button type="button" class="nx-btn nx-btn--ghost" data-nx-toast="Export queued for Sector 09.">Queue Toast</button>
+            <button type="button" class="nx-btn nx-btn--danger" data-nx-toast="CRITICAL: Intrusion alert triggered.">Alert Toast</button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

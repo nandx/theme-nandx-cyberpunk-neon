@@ -1,0 +1,321 @@
+/* ==========================================================================
+   NandX Cyberpunk Neon — Base Styles, Reset, Typography & Utilities
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--nx-bg-void);
+  background-image:
+    linear-gradient(to right, rgba(0, 240, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.035) 1px, transparent 1px),
+    radial-gradient(circle at 15% 10%, rgba(0, 240, 255, 0.08), transparent 40%),
+    radial-gradient(circle at 85% 90%, rgba(255, 42, 133, 0.07), transparent 40%);
+  background-size: 32px 32px, 32px 32px, 100% 100%, 100% 100%;
+  color: var(--nx-text-primary);
+  font-family: var(--nx-font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Optional CRT Scanlines (toggleable via body.nx-scanlines) */
+body.nx-scanlines::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: var(--nx-z-scanline);
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0px,
+    rgba(255, 255, 255, 0) 2px,
+    rgba(0, 240, 255, 0.025) 3px,
+    rgba(0, 0, 0, 0.08) 4px
+  );
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 var(--nx-space-3);
+  font-family: var(--nx-font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  color: var(--nx-text-primary);
+}
+
+h1 { font-size: clamp(1.85rem, 4vw, 3.1rem); }
+h2 { font-size: clamp(1.4rem, 2.5vw, 2.05rem); }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.05rem; }
+
+p {
+  margin: 0 0 var(--nx-space-4);
+  color: var(--nx-text-secondary);
+}
+
+a {
+  color: var(--nx-cyan);
+  text-decoration: none;
+  transition: color var(--nx-duration-fast) var(--nx-ease);
+}
+
+a:hover {
+  color: #66f6ff;
+}
+
+code, pre, kbd, samp {
+  font-family: var(--nx-font-mono);
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul, ol {
+  margin: 0 0 var(--nx-space-4);
+  padding-left: var(--nx-space-5);
+}
+
+/* Focus Ring (Accessibility) */
+:focus-visible {
+  outline: 2px solid var(--nx-cyan);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(0, 240, 255, 0.18);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--nx-bg-void);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.25);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.5);
+}
+
+/* Layout & Utility Classes */
+.nx-container {
+  width: 100%;
+  max-width: var(--nx-container-max);
+  margin-inline: auto;
+  padding-inline: var(--nx-space-4);
+}
+
+@media (min-width: 768px) {
+  .nx-container {
+    padding-inline: var(--nx-space-6);
+  }
+}
+
+.nx-section {
+  padding-block: var(--nx-space-12);
+}
+
+.nx-hud-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--nx-space-2);
+  font-family: var(--nx-font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--nx-cyan);
+}
+
+.nx-mono {
+  font-family: var(--nx-font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.nx-text-primary { color: var(--nx-text-primary); }
+.nx-text-secondary { color: var(--nx-text-secondary); }
+.nx-text-muted { color: var(--nx-text-muted); }
+.nx-text-cyan { color: var(--nx-cyan); }
+.nx-text-magenta { color: var(--nx-magenta); }
+.nx-text-lime { color: var(--nx-lime); }
+.nx-text-amber { color: var(--nx-amber); }
+.nx-text-danger { color: var(--nx-danger); }
+
+.nx-text-glow-cyan {
+  text-shadow: 0 0 14px rgba(0, 240, 255, 0.45);
+}
+
+.nx-text-glow-magenta {
+  text-shadow: 0 0 14px rgba(255, 42, 133, 0.45);
+}
+
+.nx-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Grid & Flex Helpers */
+.nx-grid {
+  display: grid;
+  gap: var(--nx-space-5);
+}
+
+.nx-grid-2 {
+  display: grid;
+  gap: var(--nx-space-5);
+  grid-template-columns: 1fr;
+}
+
+.nx-grid-3 {
+  display: grid;
+  gap: var(--nx-space-5);
+  grid-template-columns: 1fr;
+}
+
+.nx-grid-4 {
+  display: grid;
+  gap: var(--nx-space-5);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .nx-grid-2,
+  .nx-grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .nx-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .nx-grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.nx-flex { display: flex; }
+.nx-flex-wrap { flex-wrap: wrap; }
+.nx-items-center { align-items: center; }
+.nx-justify-between { justify-content: space-between; }
+.nx-gap-2 { gap: var(--nx-space-2); }
+.nx-gap-3 { gap: var(--nx-space-3); }
+.nx-gap-4 { gap: var(--nx-space-4); }
+.nx-gap-6 { gap: var(--nx-space-6); }
+
+.nx-mt-2 { margin-top: var(--nx-space-2); }
+.nx-mt-4 { margin-top: var(--nx-space-4); }
+.nx-mt-6 { margin-top: var(--nx-space-6); }
+.nx-mb-2 { margin-bottom: var(--nx-space-2); }
+.nx-mb-4 { margin-bottom: var(--nx-space-4); }
+.nx-mb-6 { margin-bottom: var(--nx-space-6); }
+
+.nx-w-full { width: 100%; }
+
+/* Glitch Hover Effect (Hero titles & 404 only) */
+.nx-glitch {
+  position: relative;
+  display: inline-block;
+}
+
+.nx-glitch--auto {
+  animation: nx-glitch-periodic 5s steps(2, end) infinite;
+}
+
+.nx-glitch:hover {
+  animation: nx-glitch-shift 260ms steps(2, end) 2;
+}
+
+@keyframes nx-glitch-shift {
+  0% { transform: translate(0, 0); text-shadow: -2px 0 var(--nx-magenta), 2px 0 var(--nx-cyan); }
+  50% { transform: translate(-2px, 1px); text-shadow: 2px 0 var(--nx-magenta), -2px 0 var(--nx-cyan); }
+  100% { transform: translate(0, 0); text-shadow: none; }
+}
+
+@keyframes nx-glitch-periodic {
+  0%, 92%, 100% { transform: translate(0, 0); }
+  93% { transform: translate(-2px, 1px); text-shadow: -2px 0 var(--nx-magenta), 2px 0 var(--nx-cyan); }
+  95% { transform: translate(2px, -1px); text-shadow: 2px 0 var(--nx-magenta), -2px 0 var(--nx-cyan); }
+  97% { transform: translate(-1px, 0); text-shadow: -2px 0 var(--nx-cyan), 2px 0 var(--nx-magenta); }
+}
+
+@keyframes nx-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.88); }
+}
+
+@keyframes nx-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes nx-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@keyframes nx-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes nx-glow-pulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(0, 240, 255, 0.25); }
+  50% { box-shadow: 0 0 22px rgba(0, 240, 255, 0.65); }
+}
+
+.nx-anim-float {
+  animation: nx-float 3s ease-in-out infinite;
+}
+
+.nx-anim-glow {
+  animation: nx-glow-pulse 2.2s ease-in-out infinite;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  body.nx-scanlines::after {
+    display: none;
+  }
+}

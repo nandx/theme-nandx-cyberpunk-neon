@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal Popups — NandX Cyberpunk Neon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layouts.css">
+</head>
+<body>
+  <div class="nx-app">
+    <aside class="nx-sidebar" data-nx-sidebar aria-label="Dashboard navigation">
+      <a href="index.html" class="nx-brand"><span class="nx-dot nx-dot--pulse" aria-hidden="true"></span><span>NAND<span class="nx-brand__accent">X</span> HUD</span></a>
+      <div class="nx-sidebar__group">
+        <div class="nx-sidebar__title">Core</div>
+        <ul class="nx-sidebar__nav">
+          <li><a href="dashboard.html" class="nx-sidebar__link">Dashboard</a></li>
+          <li><a href="widgets.html" class="nx-sidebar__link">Widgets</a></li>
+          <li><a href="charts.html" class="nx-sidebar__link">Charts</a></li>
+          <li><a href="tables.html" class="nx-sidebar__link">Data Tables</a></li>
+          <li><a href="forms.html" class="nx-sidebar__link">Forms</a></li>
+          <li><a href="task-board.html" class="nx-sidebar__link">Task Board</a></li>
+        </ul>
+      </div>
+      <div class="nx-sidebar__group">
+        <div class="nx-sidebar__title">Operations</div>
+        <ul class="nx-sidebar__nav">
+          <li><a href="invoice.html" class="nx-sidebar__link">Invoice</a></li>
+          <li><a href="search-result.html" class="nx-sidebar__link">Search Results</a></li>
+          <li><a href="alerts.html" class="nx-sidebar__link">Alerts</a></li>
+          <li><a href="animations.html" class="nx-sidebar__link">Animations</a></li>
+          <li><a href="breadcrumbs.html" class="nx-sidebar__link">Breadcrumbs</a></li>
+          <li><a href="buttons.html" class="nx-sidebar__link">Buttons</a></li>
+          <li><a href="modals.html" class="nx-sidebar__link is-active">Modals</a></li>
+          <li><a href="progress-bar.html" class="nx-sidebar__link">Progress Bars</a></li>
+          <li><a href="components.html" class="nx-sidebar__link">UI Kit</a></li>
+        </ul>
+      </div>
+      <div class="nx-sidebar__group">
+        <div class="nx-sidebar__title">Account &amp; System</div>
+        <ul class="nx-sidebar__nav">
+          <li><a href="profile.html" class="nx-sidebar__link">Profile</a></li>
+          <li><a href="login.html" class="nx-sidebar__link">Login</a></li>
+          <li><a href="reset-password.html" class="nx-sidebar__link">Reset Password</a></li>
+          <li><a href="coming-soon.html" class="nx-sidebar__link">Coming Soon</a></li>
+          <li><a href="error.html" class="nx-sidebar__link">Error Page</a></li>
+          <li><a href="404.html" class="nx-sidebar__link">404 Error</a></li>
+          <li><a href="500.html" class="nx-sidebar__link">500 Error</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="nx-app__content">
+      <header class="nx-topbar">
+        <div class="nx-flex nx-items-center nx-gap-3">
+          <button type="button" class="nx-btn nx-btn--ghost nx-btn--icon nx-sidebar-toggle" data-nx-sidebar-toggle aria-expanded="false" aria-label="Toggle sidebar">&#9776;</button>
+          <span class="nx-hud-label">OVERLAYS // MODAL POPUPS</span>
+        </div>
+        <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-toggle-scanlines>FX: Scanline</button>
+      </header>
+
+      <main class="nx-main">
+        <ul class="nx-breadcrumb">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li>Modals</li>
+        </ul>
+
+        <h1 class="nx-mb-2">Modal Popups</h1>
+        <p class="nx-mb-6">Accessible, keyboard-friendly cyberpunk HUD modals with Escape and backdrop dismissal.</p>
+
+        <div class="nx-grid-3">
+          <article class="nx-card">
+            <div class="nx-card__header"><h2 class="nx-card__title">Default Modal</h2><span class="nx-badge">520px</span></div>
+            <div class="nx-card__body">
+              <p>Standard HUD confirmation dialog for general actions and status prompts.</p>
+              <button type="button" class="nx-btn nx-btn--primary" data-nx-modal-open="modal-default">Launch Default</button>
+            </div>
+          </article>
+
+          <article class="nx-card">
+            <div class="nx-card__header"><h2 class="nx-card__title">Small Modal</h2><span class="nx-badge">380px</span></div>
+            <div class="nx-card__body">
+              <p>Compact dialog for quick alerts, acknowledgments, or PIN prompts.</p>
+              <button type="button" class="nx-btn nx-btn--ghost" data-nx-modal-open="modal-sm">Launch Small</button>
+            </div>
+          </article>
+
+          <article class="nx-card">
+            <div class="nx-card__header"><h2 class="nx-card__title">Large Form Modal</h2><span class="nx-badge nx-badge--magenta">720px</span></div>
+            <div class="nx-card__body">
+              <p>Multi-column form dialog for creating or editing node configurations.</p>
+              <button type="button" class="nx-btn nx-btn--magenta" data-nx-modal-open="modal-form">Launch Form</button>
+            </div>
+          </article>
+
+          <article class="nx-card">
+            <div class="nx-card__header"><h2 class="nx-card__title">Danger Modal</h2><span class="nx-badge nx-badge--danger">ALERT</span></div>
+            <div class="nx-card__body">
+              <p>High-contrast red glow dialog for destructive actions like deleting records.</p>
+              <button type="button" class="nx-btn nx-btn--danger" data-nx-modal-open="modal-danger">Launch Danger</button>
+            </div>
+          </article>
+
+          <article class="nx-card">
+            <div class="nx-card__header"><h2 class="nx-card__title">Auth Modal</h2><span class="nx-badge nx-badge--lime">LOGIN</span></div>
+            <div class="nx-card__body">
+              <p>Inline operator re-authentication popup without leaving the current page.</p>
+              <button type="button" class="nx-btn nx-btn--primary" data-nx-modal-open="modal-auth">Launch Auth</button>
+            </div>
+          </article>
+
+          <article class="nx-card">
+            <div class="nx-card__header"><h2 class="nx-card__title">Scrollable Modal</h2><span class="nx-badge">LONG</span></div>
+            <div class="nx-card__body">
+              <p>Scroll-contained body for audit logs, changelogs, or terms of service.</p>
+              <button type="button" class="nx-btn nx-btn--ghost" data-nx-modal-open="modal-scroll">Launch Scrollable</button>
+            </div>
+          </article>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Default Modal -->
+  <div id="modal-default" class="nx-modal" role="dialog" aria-modal="true" aria-labelledby="modal-default-title" aria-hidden="true">
+    <div class="nx-modal__dialog">
+      <div class="nx-card__header">
+        <h2 id="modal-default-title" class="nx-card__title">HUD Confirmation</h2>
+        <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-modal-close aria-label="Close modal">X</button>
+      </div>
+      <div class="nx-card__body">
+        <p>Synchronize telemetry configuration across all active Neo-Tokyo edge nodes?</p>
+      </div>
+      <div class="nx-card__footer">
+        <button type="button" class="nx-btn nx-btn--ghost" data-nx-modal-close>Cancel</button>
+        <button type="button" class="nx-btn nx-btn--primary" data-nx-modal-close data-nx-toast="Telemetry synced.">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Small Modal -->
+  <div id="modal-sm" class="nx-modal" role="dialog" aria-modal="true" aria-labelledby="modal-sm-title" aria-hidden="true">
+    <div class="nx-modal__dialog nx-modal__dialog--sm">
+      <div class="nx-card__header">
+        <h2 id="modal-sm-title" class="nx-card__title">Quick Notice</h2>
+        <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-modal-close aria-label="Close modal">X</button>
+      </div>
+      <div class="nx-card__body">
+        <p class="nx-mb-2">Compact 380px modal for short status confirmations.</p>
+      </div>
+      <div class="nx-card__footer">
+        <button type="button" class="nx-btn nx-btn--primary nx-btn--sm" data-nx-modal-close>Understood</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Large Form Modal -->
+  <div id="modal-form" class="nx-modal" role="dialog" aria-modal="true" aria-labelledby="modal-form-title" aria-hidden="true">
+    <div class="nx-modal__dialog nx-modal__dialog--lg">
+      <div class="nx-card__header">
+        <h2 id="modal-form-title" class="nx-card__title">Deploy New Node</h2>
+        <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-modal-close aria-label="Close modal">X</button>
+      </div>
+      <form onsubmit="event.preventDefault();">
+        <div class="nx-card__body nx-grid-2">
+          <div class="nx-field">
+            <label class="nx-label" for="m-node-id">Node ID</label>
+            <input id="m-node-id" type="text" class="nx-input" placeholder="NX-901">
+          </div>
+          <div class="nx-field">
+            <label class="nx-label" for="m-region">Region</label>
+            <select id="m-region" class="nx-select"><option>Neo-Tokyo</option><option>Night City</option></select>
+          </div>
+        </div>
+        <div class="nx-card__footer">
+          <button type="button" class="nx-btn nx-btn--ghost" data-nx-modal-close>Cancel</button>
+          <button type="submit" class="nx-btn nx-btn--magenta" data-nx-modal-close data-nx-toast="Node deployment queued.">Deploy</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Danger Modal -->
+  <div id="modal-danger" class="nx-modal" role="dialog" aria-modal="true" aria-labelledby="modal-danger-title" aria-hidden="true">
+    <div class="nx-modal__dialog nx-modal__dialog--danger">
+      <div class="nx-card__header">
+        <h2 id="modal-danger-title" class="nx-card__title nx-text-danger">Purge Node Data</h2>
+        <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-modal-close aria-label="Close modal">X</button>
+      </div>
+      <div class="nx-card__body">
+        <p>This action will permanently wipe telemetry logs for <code>NX-041</code>. Continue?</p>
+      </div>
+      <div class="nx-card__footer">
+        <button type="button" class="nx-btn nx-btn--ghost" data-nx-modal-close>Abort</button>
+        <button type="button" class="nx-btn nx-btn--danger" data-nx-modal-close data-nx-toast="Node logs purged.">Confirm Purge</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Auth Modal -->
+  <div id="modal-auth" class="nx-modal" role="dialog" aria-modal="true" aria-labelledby="modal-auth-title" aria-hidden="true">
+    <div class="nx-modal__dialog nx-modal__dialog--sm">
+      <div class="nx-card__header">
+        <h2 id="modal-auth-title" class="nx-card__title">Re-Authenticate</h2>
+        <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-modal-close aria-label="Close modal">X</button>
+      </div>
+      <form onsubmit="event.preventDefault();">
+        <div class="nx-card__body">
+          <div class="nx-field">
+            <label class="nx-label" for="m-auth-email">Operator Email</label>
+            <input id="m-auth-email" type="email" class="nx-input" value="tanaka@nandx.io">
+          </div>
+          <div class="nx-field">
+            <label class="nx-label" for="m-auth-pass">Passkey</label>
+            <input id="m-auth-pass" type="password" class="nx-input" placeholder="••••••••">
+          </div>
+        </div>
+        <div class="nx-card__footer">
+          <button type="button" class="nx-btn nx-btn--ghost" data-nx-modal-close>Cancel</button>
+          <button type="submit" class="nx-btn nx-btn--primary" data-nx-modal-close data-nx-toast="Session verified.">Unlock</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scrollable Modal -->
+  <div id="modal-scroll" class="nx-modal" role="dialog" aria-modal="true" aria-labelledby="modal-scroll-title" aria-hidden="true">
+    <div class="nx-modal__dialog">
+      <div class="nx-card__header">
+        <h2 id="modal-scroll-title" class="nx-card__title">System Audit Log</h2>
+        <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-modal-close aria-label="Close modal">X</button>
+      </div>
+      <div class="nx-card__body nx-modal__body--scroll">
+        <pre class="nx-code-block"><code>[18:01:02] INIT core telemetry daemon
+[18:01:05] LOAD tokens.css (--nx-cyan)
+[18:01:09] VERIFY TLS 1.3 cipher suite
+[18:01:14] SYNC Neo-Tokyo edge node 01
+[18:01:19] SYNC Night City edge node 02
+[18:01:24] SYNC Berlin grid node 03
+[18:01:30] CHECKSUM OK (sha256:9f2a...c84e)
+[18:01:36] FIREWALL zero-trust ruleset active
+[18:01:42] HEARTBEAT 14ms nominal
+[18:01:48] HEARTBEAT 12ms nominal
+[18:01:55] HEARTBEAT 13ms nominal
+[18:02:01] STATUS: READY</code></pre>
+      </div>
+      <div class="nx-card__footer">
+        <button type="button" class="nx-btn nx-btn--primary" data-nx-modal-close>Close Log</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

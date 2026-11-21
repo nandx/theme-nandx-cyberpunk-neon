@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Components UI Kit — NandX Cyberpunk Neon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layouts.css">
+</head>
+<body>
+  <header class="nx-navbar">
+    <div class="nx-container nx-navbar__inner">
+      <a href="index.html" class="nx-brand">
+        <span class="nx-dot nx-dot--pulse" aria-hidden="true"></span>
+        <span>NAND<span class="nx-brand__accent">X</span></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <ul class="nx-nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="components.html" class="is-active">Components</a></li>
+          <li><a href="tables.html">Tables</a></li>
+          <li><a href="forms.html">Forms</a></li>
+        </ul>
+      </nav>
+      <div class="nx-flex nx-items-center nx-gap-2">
+        <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-toggle-scanlines aria-pressed="false">FX: Scanline</button>
+        <button type="button" class="nx-btn nx-btn--ghost nx-btn--icon nx-nav-toggle" data-nx-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-nav" class="nx-mobile-drawer" data-nx-mobile-drawer>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="components.html">Components</a></li>
+      <li><a href="tables.html">Tables</a></li>
+      <li><a href="forms.html">Forms</a></li>
+    </ul>
+  </div>
+
+  <main class="nx-container nx-section">
+    <ul class="nx-breadcrumb">
+      <li><a href="index.html">Home</a></li>
+      <li>Components UI Kit</li>
+    </ul>
+    <h1 class="nx-mb-2">UI Kit &amp; Component Reference</h1>
+    <p class="nx-mb-4">Complete cyberpunk neon component library—colors, typography, buttons, cards, overlays, forms, and data displays.</p>
+
+    <div class="nx-flex nx-flex-wrap nx-gap-2 nx-mb-6">
+      <a href="#colors" class="nx-badge">01 Colors</a>
+      <a href="#typography" class="nx-badge">02 Typography</a>
+      <a href="#buttons" class="nx-badge">03 Buttons</a>
+      <a href="#badges" class="nx-badge">04 Badges</a>
+      <a href="#cards" class="nx-badge">05 Cards</a>
+      <a href="#alerts" class="nx-badge">06 Alerts</a>
+      <a href="#navigation" class="nx-badge">07 Tabs &amp; Nav</a>
+      <a href="#accordion" class="nx-badge">08 Accordion</a>
+      <a href="#overlays" class="nx-badge">09 Modals &amp; Popovers</a>
+      <a href="#forms" class="nx-badge">10 Forms</a>
+      <a href="#loaders" class="nx-badge">11 Progress &amp; Gauges</a>
+      <a href="#lists" class="nx-badge">12 Lists &amp; Timeline</a>
+    </div>
+
+    <div class="nx-grid nx-gap-6">
+      <!-- 01. Colors -->
+      <section id="colors" class="nx-card">
+        <div class="nx-card__header"><h2 class="nx-card__title">01 // Color Palette &amp; Tokens</h2></div>
+        <div class="nx-card__body nx-grid-4">
+          <div class="nx-swatch"><div class="nx-swatch__color nx-swatch__color--cyan"></div><div class="nx-swatch__meta"><strong>--nx-cyan</strong><br>#00f0ff</div></div>
+          <div class="nx-swatch"><div class="nx-swatch__color nx-swatch__color--magenta"></div><div class="nx-swatch__meta"><strong>--nx-magenta</strong><br>#ff2a85</div></div>
+          <div class="nx-swatch"><div class="nx-swatch__color nx-swatch__color--lime"></div><div class="nx-swatch__meta"><strong>--nx-lime</strong><br>#39ff14</div></div>
+          <div class="nx-swatch"><div class="nx-swatch__color nx-swatch__color--amber"></div><div class="nx-swatch__meta"><strong>--nx-amber</strong><br>#ffb800</div></div>
+          <div class="nx-swatch"><div class="nx-swatch__color nx-swatch__color--danger"></div><div class="nx-swatch__meta"><strong>--nx-danger</strong><br>#ff3b5c</div></div>
+          <div class="nx-swatch"><div class="nx-swatch__color nx-swatch__color--void"></div><div class="nx-swatch__meta"><strong>--nx-bg-void</strong><br>#06070d</div></div>
+          <div class="nx-swatch"><div class="nx-swatch__color nx-swatch__color--surface"></div><div class="nx-swatch__meta"><strong>--nx-bg-surface</strong><br>#0d101b</div></div>
+          <div class="nx-swatch"><div class="nx-swatch__color nx-swatch__color--elevated"></div><div class="nx-swatch__meta"><strong>--nx-bg-elevated</strong><br>#14192b</div></div>
+        </div>
+      </section>
+
+      <!-- 02. Typography & Code -->
+      <section id="typography" class="nx-card">
+        <div class="nx-card__header"><h2 class="nx-card__title">02 // Typography &amp; Code Blocks</h2></div>
+        <div class="nx-card__body nx-grid-2">
+          <div>
+            <h1>Heading H1 // Orbitron</h1>
+            <h2>Heading H2 // HUD Section</h2>
+            <h3>Heading H3 // Card Title</h3>
+            <h4>Heading H4 // Subhead</h4>
+            <p>Body paragraph in Space Grotesk with high-contrast legibility on dark obsidian surfaces.</p>
+            <span class="nx-hud-label">HUD LABEL // MONOSPACE</span>
+          </div>
+          <div>
+            <pre class="nx-code-block"><code>// Terminal / Code Block
+const node = "NX-01";
+if (node.status === "ONLINE") {
+  initTelemetry();
+}<span class="nx-cursor" aria-hidden="true"></span></code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03. Buttons, Sizes, Groups & Dropdown -->
+      <section id="buttons" class="nx-card">
+        <div class="nx-card__header"><h2 class="nx-card__title">03 // Buttons, Sizes, Groups &amp; Dropdown</h2></div>
+        <div class="nx-card__body nx-grid nx-gap-4">
+          <div class="nx-flex nx-flex-wrap nx-gap-3">
+            <button type="button" class="nx-btn nx-btn--primary">Primary Cyan</button>
+            <button type="button" class="nx-btn">Default Neon</button>
+            <button type="button" class="nx-btn nx-btn--magenta">Magenta</button>
+            <button type="button" class="nx-btn nx-btn--ghost">Ghost HUD</button>
+            <button type="button" class="nx-btn nx-btn--danger">Danger</button>
+            <button type="button" class="nx-btn" disabled>Disabled</button>
+          </div>
+          <div class="nx-flex nx-flex-wrap nx-items-center nx-gap-3">
+            <button type="button" class="nx-btn nx-btn--primary nx-btn--sm">Small</button>
+            <button type="button" class="nx-btn nx-btn--primary">Default</button>
+            <button type="button" class="nx-btn nx-btn--primary nx-btn--lg">Large</button>
+            <button type="button" class="nx-btn nx-btn--icon" aria-label="Settings">&#9881;</button>
+
+            <div class="nx-btn-group" role="group" aria-label="Button group">
+              <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm">Day</button>
+              <button type="button" class="nx-btn nx-btn--sm">Week</button>
+              <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm">Month</button>
+            </div>
+
+            <div class="nx-dropdown">
+              <button type="button" class="nx-btn nx-btn--magenta nx-btn--sm" data-nx-dropdown-toggle aria-expanded="false">Actions &#9662;</button>
+              <div class="nx-dropdown__menu" role="menu">
+                <button type="button" class="nx-dropdown__item" role="menuitem" data-nx-toast="Node restarted.">Restart Node</button>
+                <button type="button" class="nx-dropdown__item" role="menuitem" data-nx-toast="Logs exported.">Export Logs</button>
+                <button type="button" class="nx-dropdown__item" role="menuitem" data-nx-toast="Cache cleared.">Clear Cache</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04. Badges & Status Dots -->
+      <section id="badges" class="nx-card">
+        <div class="nx-card__header"><h2 class="nx-card__title">04 // Badges &amp; Status Indicators</h2></div>
+        <div class="nx-card__body nx-flex nx-flex-wrap nx-items-center nx-gap-3">
+          <span class="nx-badge"><span class="nx-dot nx-dot--pulse" aria-hidden="true"></span> Cyan Live</span>
+          <span class="nx-badge nx-badge--magenta">Magenta</span>
+          <span class="nx-badge nx-badge--lime"><span class="nx-dot nx-dot--lime" aria-hidden="true"></span> Nominal</span>
+          <span class="nx-badge nx-badge--amber"><span class="nx-dot nx-dot--amber" aria-hidden="true"></span> Warning</span>
+          <span class="nx-badge nx-badge--danger"><span class="nx-dot nx-dot--danger" aria-hidden="true"></span> Critical</span>
+        </div>
+      </section>
+
+      <!-- 05. Cards & Stat Variants -->
+      <section id="cards" class="nx-grid-3">
+        <article class="nx-card">
+          <div class="nx-card__header"><h2 class="nx-card__title">Standard Card</h2><span class="nx-badge">BASE</span></div>
+          <div class="nx-card__body"><p>Clean dark obsidian surface with subtle 1px cyan border.</p></div>
+          <div class="nx-card__footer"><span class="nx-mono nx-text-muted">FOOTER</span><a href="#" class="nx-mono">Action &rarr;</a></div>
+        </article>
+
+        <article class="nx-card nx-card--hud">
+          <div class="nx-card__header"><h2 class="nx-card__title">Chamfered HUD</h2><span class="nx-badge nx-badge--magenta">HUD</span></div>
+          <div class="nx-card__body"><p>Signature angled corners using <code>clip-path</code> and gradient border.</p></div>
+          <div class="nx-card__footer"><span class="nx-mono nx-text-muted">VERIFIED</span><span class="nx-dot nx-dot--lime"></span></div>
+        </article>
+
+        <div class="nx-stat nx-stat--lime">
+          <span class="nx-stat__label">Stat / KPI Card</span>
+          <span class="nx-stat__value">99.98%</span>
+          <span class="nx-stat__delta nx-text-lime">+0.14% uptime</span>
+        </div>
+      </section>
+
+      <!-- 06. Alerts -->
+      <section id="alerts" class="nx-card">
+        <div class="nx-card__header"><h2 class="nx-card__title">06 // Alerts &amp; Toasts</h2></div>
+        <div class="nx-card__body nx-grid nx-gap-3">
+          <div class="nx-alert"><div><strong class="nx-alert__title">System Info</strong><p class="nx-alert__desc">Telemetry link synchronized with Neo-Tokyo Node 04.</p></div></div>
+          <div class="nx-alert nx-alert--lime"><div><strong class="nx-alert__title">Deployment Verified</strong><p class="nx-alert__desc">All security checksums passed.</p></div></div>
+          <div class="nx-alert nx-alert--amber"><div><strong class="nx-alert__title">High Latency</strong><p class="nx-alert__desc">Relay sector 7 experiencing packet jitter.</p></div></div>
+          <div class="nx-alert nx-alert--danger"><div><strong class="nx-alert__title">Firewall Breach</strong><p class="nx-alert__desc">Unauthorized handshake detected on port 9042.</p></div></div>
+        </div>
+      </section>
+
+      <!-- 07. Horizontal & Vertical Tabs + Pagination -->
+      <section id="navigation" class="nx-grid-2">
+        <div class="nx-card" data-nx-tabs>
+          <div class="nx-card__header"><h2 class="nx-card__title">07a // Horizontal Tabs</h2></div>
+          <div class="nx-card__body">
+            <div class="nx-tabs__list" role="tablist">
+              <button type="button" class="nx-tab-btn is-active" role="tab" aria-selected="true" data-nx-tab-target="t1">Overview</button>
+              <button type="button" class="nx-tab-btn" role="tab" aria-selected="false" data-nx-tab-target="t2">Specs</button>
+              <button type="button" class="nx-tab-btn" role="tab" aria-selected="false" data-nx-tab-target="t3">Logs</button>
+            </div>
+            <div class="nx-tab-panel is-active" data-nx-tab-panel="t1"><p>Modular tab panels controlled by lightweight vanilla JS.</p></div>
+            <div class="nx-tab-panel" data-nx-tab-panel="t2"><p class="nx-mono">FREQ: 4.8GHz // MEM: 64GB ECC // TEMP: 41C</p></div>
+            <div class="nx-tab-panel" data-nx-tab-panel="t3"><p class="nx-mono">[17:42:09] Heartbeat OK</p></div>
+          </div>
+        </div>
+
+        <div class="nx-card" data-nx-tabs>
+          <div class="nx-card__header"><h2 class="nx-card__title">07b // Vertical Tabs</h2></div>
+          <div class="nx-card__body nx-tabs--vertical">
+            <div class="nx-tabs__list" role="tablist">
+              <button type="button" class="nx-tab-btn is-active" role="tab" aria-selected="true" data-nx-tab-target="vt1">General</button>
+              <button type="button" class="nx-tab-btn" role="tab" aria-selected="false" data-nx-tab-target="vt2">Network</button>
+              <button type="button" class="nx-tab-btn" role="tab" aria-selected="false" data-nx-tab-target="vt3">Security</button>
+            </div>
+            <div>
+              <div class="nx-tab-panel is-active" data-nx-tab-panel="vt1"><p>Vertical tab layout ideal for settings and detail views.</p></div>
+              <div class="nx-tab-panel" data-nx-tab-panel="vt2"><p class="nx-mono">IPv6 Mesh: ENABLED</p></div>
+              <div class="nx-tab-panel" data-nx-tab-panel="vt3"><p class="nx-mono">Hardware Key: ACTIVE</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 08. Accordion & 09. Overlays -->
+      <section class="nx-grid-2">
+        <div id="accordion" class="nx-card">
+          <div class="nx-card__header"><h2 class="nx-card__title">08 // Accordion</h2></div>
+          <div class="nx-card__body">
+            <div class="nx-accordion" data-nx-accordion>
+              <div class="nx-accordion__item">
+                <button type="button" class="nx-accordion__trigger" aria-expanded="true">01 // How do I customize colors? <span>+</span></button>
+                <div class="nx-accordion__panel is-open">Edit the <code>--nx-*</code> variables inside <code>assets/css/tokens.css</code>.</div>
+              </div>
+              <div class="nx-accordion__item">
+                <button type="button" class="nx-accordion__trigger" aria-expanded="false">02 // Does it require a bundler? <span>+</span></button>
+                <div class="nx-accordion__panel">No. All CSS and JS files work natively in the browser.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="overlays" class="nx-card">
+          <div class="nx-card__header"><h2 class="nx-card__title">09 // Modal Popups, Tooltip, Popover &amp; Toast</h2><a href="modals.html" class="nx-btn nx-btn--ghost nx-btn--sm">Full Modals Page</a></div>
+          <div class="nx-card__body nx-flex nx-flex-wrap nx-items-center nx-gap-3">
+            <button type="button" class="nx-btn nx-btn--primary" data-nx-modal-open="demo-modal">Default Modal</button>
+            <button type="button" class="nx-btn nx-btn--ghost" data-nx-modal-open="modal-sm">Small Modal</button>
+            <button type="button" class="nx-btn nx-btn--magenta" data-nx-modal-open="modal-form">Form Modal</button>
+            <button type="button" class="nx-btn nx-btn--danger" data-nx-modal-open="modal-danger">Danger Modal</button>
+            <button type="button" class="nx-btn nx-btn--ghost" data-nx-toast="Protocol override executed.">Trigger Toast</button>
+
+            <div class="nx-tooltip-wrap">
+              <button type="button" class="nx-btn nx-btn--ghost">Hover Tooltip</button>
+              <span class="nx-tooltip" role="tooltip">HUD Tooltip // Ctrl+K</span>
+            </div>
+
+            <div class="nx-popover-wrap">
+              <button type="button" class="nx-btn nx-btn--ghost" data-nx-popover-toggle aria-expanded="false">Click Popover</button>
+              <div class="nx-popover" role="dialog">
+                <strong class="nx-popover__title">Node Info</strong>
+                <p class="nx-mb-2">Sector 09 relay operating at 99.9% efficiency.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. Form Controls Quick Reference -->
+      <section id="forms" class="nx-card">
+        <div class="nx-card__header"><h2 class="nx-card__title">10 // Form Controls &amp; States</h2><a href="forms.html" class="nx-btn nx-btn--ghost nx-btn--sm">Full Form Page</a></div>
+        <div class="nx-card__body nx-grid-3">
+          <div class="nx-field">
+            <label class="nx-label" for="uk-valid">Valid Input</label>
+            <input id="uk-valid" type="text" class="nx-input is-valid" value="NX-VALID-01">
+          </div>
+          <div class="nx-field">
+            <label class="nx-label" for="uk-invalid">Invalid Input</label>
+            <input id="uk-invalid" type="text" class="nx-input is-invalid" value="ERR-PORT">
+          </div>
+          <div class="nx-field">
+            <label class="nx-label" for="uk-select">Select Menu</label>
+            <select id="uk-select" class="nx-select"><option>Neo-Tokyo</option><option>Night City</option></select>
+          </div>
+          <div class="nx-flex nx-items-center nx-gap-4">
+            <label class="nx-switch"><input type="checkbox" checked><span>Switch</span></label>
+            <label class="nx-check"><input type="checkbox" checked><span>Check</span></label>
+            <label class="nx-check"><input type="radio" name="uk-rad" checked><span>Radio</span></label>
+          </div>
+          <div class="nx-field">
+            <label class="nx-label" for="uk-range">Range Slider</label>
+            <input id="uk-range" type="range" class="nx-range" value="70">
+          </div>
+          <div class="nx-field">
+            <span class="nx-label">Rating</span>
+            <div class="nx-rating">
+              <input type="radio" id="ukr5" name="ukr"><label for="ukr5">&#9733;</label>
+              <input type="radio" id="ukr4" name="ukr" checked><label for="ukr4">&#9733;</label>
+              <input type="radio" id="ukr3" name="ukr"><label for="ukr3">&#9733;</label>
+              <input type="radio" id="ukr2" name="ukr"><label for="ukr2">&#9733;</label>
+              <input type="radio" id="ukr1" name="ukr"><label for="ukr1">&#9733;</label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11. Progress, Gauges & Loaders + 12. List Group & Timeline -->
+      <section class="nx-grid-2">
+        <div id="loaders" class="nx-card">
+          <div class="nx-card__header"><h2 class="nx-card__title">11 // Progress, Gauge, Spinner &amp; Skeleton</h2></div>
+          <div class="nx-card__body nx-grid nx-gap-4">
+            <div>
+              <div class="nx-flex nx-justify-between nx-mono nx-mb-2"><span>UPLOAD</span><span>78%</span></div>
+              <div class="nx-progress"><div class="nx-progress__bar nx-progress__bar--w78"></div></div>
+            </div>
+            <div class="nx-flex nx-items-center nx-gap-4">
+              <div class="nx-gauge">
+                <svg width="112" height="112" viewBox="0 0 112 112" aria-hidden="true">
+                  <circle class="nx-gauge__track" cx="56" cy="56" r="46"></circle>
+                  <circle class="nx-gauge__fill" cx="56" cy="56" r="46" stroke-dasharray="289" stroke-dashoffset="64"></circle>
+                </svg>
+                <span class="nx-gauge__value nx-text-cyan">78%</span>
+              </div>
+              <span class="nx-spinner" aria-label="Loading"></span>
+              <div class="nx-w-full nx-grid nx-gap-2">
+                <div class="nx-skeleton"></div>
+                <div class="nx-skeleton"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="lists" class="nx-card">
+          <div class="nx-card__header"><h2 class="nx-card__title">12 // List Group, Timeline &amp; Pagination</h2></div>
+          <div class="nx-card__body">
+            <ul class="nx-list-group nx-mb-4">
+              <li class="nx-list-group__item"><span>Node Alpha</span><span class="nx-badge nx-badge--lime">99.9%</span></li>
+              <li class="nx-list-group__item"><span>Node Beta</span><span class="nx-badge nx-badge--amber">84.2%</span></li>
+            </ul>
+            <ul class="nx-timeline">
+              <li class="nx-timeline__item">
+                <span class="nx-timeline__time">17:50 UTC</span>
+                <p>Core tokens synchronized across edge nodes.</p>
+              </li>
+              <li class="nx-timeline__item">
+                <span class="nx-timeline__time">17:20 UTC</span>
+                <p>Operator session verified via hardware key.</p>
+              </li>
+            </ul>
+            <nav aria-label="Pagination" class="nx-mt-4">
+              <ul class="nx-pagination">
+                <li><a href="#" class="nx-page-link">&laquo;</a></li>
+                <li><a href="#" class="nx-page-link is-active">1</a></li>
+                <li><a href="#" class="nx-page-link">2</a></li>
+                <li><a href="#" class="nx-page-link">3</a></li>
+                <li><a href="#" class="nx-page-link">&raquo;</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="demo-modal" class="nx-modal" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title" aria-hidden="true">
+    <div class="nx-modal__dialog">
+      <div class="nx-card__header">
+        <h2 id="demo-modal-title" class="nx-card__title">HUD Confirmation</h2>
+        <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-modal-close aria-label="Close modal">X</button>
+      </div>
+      <div class="nx-card__body">
+        <p>This modal traps focus on open and closes cleanly with Escape or backdrop click.</p>
+      </div>
+      <div class="nx-card__footer">
+        <button type="button" class="nx-btn nx-btn--ghost" data-nx-modal-close>Cancel</button>
+        <button type="button" class="nx-btn nx-btn--primary" data-nx-modal-close>Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-sm" class="nx-modal" role="dialog" aria-modal="true" aria-labelledby="modal-sm-title" aria-hidden="true">
+    <div class="nx-modal__dialog nx-modal__dialog--sm">
+      <div class="nx-card__header">
+        <h2 id="modal-sm-title" class="nx-card__title">Quick Notice</h2>
+        <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-modal-close aria-label="Close modal">X</button>
+      </div>
+      <div class="nx-card__body">
+        <p class="nx-mb-2">Compact 380px modal for short status confirmations.</p>
+      </div>
+      <div class="nx-card__footer">
+        <button type="button" class="nx-btn nx-btn--primary nx-btn--sm" data-nx-modal-close>Understood</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-form" class="nx-modal" role="dialog" aria-modal="true" aria-labelledby="modal-form-title" aria-hidden="true">
+    <div class="nx-modal__dialog nx-modal__dialog--lg">
+      <div class="nx-card__header">
+        <h2 id="modal-form-title" class="nx-card__title">Deploy New Node</h2>
+        <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-modal-close aria-label="Close modal">X</button>
+      </div>
+      <form onsubmit="event.preventDefault();">
+        <div class="nx-card__body nx-grid-2">
+          <div class="nx-field">
+            <label class="nx-label" for="m-node-id">Node ID</label>
+            <input id="m-node-id" type="text" class="nx-input" placeholder="NX-901">
+          </div>
+          <div class="nx-field">
+            <label class="nx-label" for="m-region">Region</label>
+            <select id="m-region" class="nx-select"><option>Neo-Tokyo</option><option>Night City</option></select>
+          </div>
+        </div>
+        <div class="nx-card__footer">
+          <button type="button" class="nx-btn nx-btn--ghost" data-nx-modal-close>Cancel</button>
+          <button type="submit" class="nx-btn nx-btn--magenta" data-nx-modal-close data-nx-toast="Node deployment queued.">Deploy</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="modal-danger" class="nx-modal" role="dialog" aria-modal="true" aria-labelledby="modal-danger-title" aria-hidden="true">
+    <div class="nx-modal__dialog nx-modal__dialog--danger">
+      <div class="nx-card__header">
+        <h2 id="modal-danger-title" class="nx-card__title nx-text-danger">Purge Node Data</h2>
+        <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-modal-close aria-label="Close modal">X</button>
+      </div>
+      <div class="nx-card__body">
+        <p>This action will permanently wipe telemetry logs for <code>NX-041</code>. Continue?</p>
+      </div>
+      <div class="nx-card__footer">
+        <button type="button" class="nx-btn nx-btn--ghost" data-nx-modal-close>Abort</button>
+        <button type="button" class="nx-btn nx-btn--danger" data-nx-modal-close data-nx-toast="Node logs purged.">Confirm Purge</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

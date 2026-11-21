@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 Signal Lost — NandX Cyberpunk Neon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layouts.css">
+</head>
+<body>
+  <main class="nx-center-shell">
+    <section class="nx-card nx-card--hud nx-auth-card">
+      <div class="nx-card__header">
+        <span class="nx-hud-label"><span class="nx-dot nx-dot--danger nx-dot--pulse" aria-hidden="true"></span> ERR_SIGNAL_LOST</span>
+        <span class="nx-badge nx-badge--danger">404</span>
+      </div>
+      <div class="nx-card__body">
+        <h1 class="nx-glitch nx-text-glow-magenta">404 // ROUTE NOT FOUND</h1>
+        <p>The requested sector coordinates do not exist or have been purged from the network.</p>
+        <pre class="nx-code-block nx-mb-6"><code>$ trace --route /unknown-sector
+[ERR] 404: No active relay at destination
+[HINT] Reconnect to primary gateway<span class="nx-cursor" aria-hidden="true"></span></code></pre>
+        <div class="nx-flex nx-flex-wrap nx-gap-3">
+          <a href="index.html" class="nx-btn nx-btn--primary">Back to Home</a>
+          <a href="dashboard.html" class="nx-btn nx-btn--ghost">Open Dashboard</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

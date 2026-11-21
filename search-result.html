@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results — NandX Cyberpunk Neon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layouts.css">
+</head>
+<body>
+  <div class="nx-app">
+    <aside class="nx-sidebar" data-nx-sidebar aria-label="Dashboard navigation">
+      <a href="index.html" class="nx-brand"><span class="nx-dot nx-dot--pulse" aria-hidden="true"></span><span>NAND<span class="nx-brand__accent">X</span> HUD</span></a>
+      <div class="nx-sidebar__group">
+        <div class="nx-sidebar__title">Core</div>
+        <ul class="nx-sidebar__nav">
+          <li><a href="dashboard.html" class="nx-sidebar__link">Dashboard</a></li>
+          <li><a href="widgets.html" class="nx-sidebar__link">Widgets</a></li>
+          <li><a href="charts.html" class="nx-sidebar__link">Charts</a></li>
+          <li><a href="tables.html" class="nx-sidebar__link">Data Tables</a></li>
+          <li><a href="forms.html" class="nx-sidebar__link">Forms</a></li>
+          <li><a href="task-board.html" class="nx-sidebar__link">Task Board</a></li>
+        </ul>
+      </div>
+      <div class="nx-sidebar__group">
+        <div class="nx-sidebar__title">Operations</div>
+        <ul class="nx-sidebar__nav">
+          <li><a href="invoice.html" class="nx-sidebar__link">Invoice</a></li>
+          <li><a href="search-result.html" class="nx-sidebar__link is-active">Search Results</a></li>
+          <li><a href="alerts.html" class="nx-sidebar__link">Alerts</a></li>
+          <li><a href="animations.html" class="nx-sidebar__link">Animations</a></li>
+          <li><a href="breadcrumbs.html" class="nx-sidebar__link">Breadcrumbs</a></li>
+          <li><a href="buttons.html" class="nx-sidebar__link">Buttons</a></li>
+          <li><a href="modals.html" class="nx-sidebar__link">Modals</a></li>
+          <li><a href="progress-bar.html" class="nx-sidebar__link">Progress Bars</a></li>
+          <li><a href="components.html" class="nx-sidebar__link">UI Kit</a></li>
+        </ul>
+      </div>
+      <div class="nx-sidebar__group">
+        <div class="nx-sidebar__title">Account &amp; System</div>
+        <ul class="nx-sidebar__nav">
+          <li><a href="profile.html" class="nx-sidebar__link">Profile</a></li>
+          <li><a href="login.html" class="nx-sidebar__link">Login</a></li>
+          <li><a href="reset-password.html" class="nx-sidebar__link">Reset Password</a></li>
+          <li><a href="coming-soon.html" class="nx-sidebar__link">Coming Soon</a></li>
+          <li><a href="error.html" class="nx-sidebar__link">Error Page</a></li>
+          <li><a href="404.html" class="nx-sidebar__link">404 Error</a></li>
+          <li><a href="500.html" class="nx-sidebar__link">500 Error</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="nx-app__content">
+      <header class="nx-topbar">
+        <div class="nx-flex nx-items-center nx-gap-3">
+          <button type="button" class="nx-btn nx-btn--ghost nx-btn--icon nx-sidebar-toggle" data-nx-sidebar-toggle aria-expanded="false" aria-label="Toggle sidebar">&#9776;</button>
+          <span class="nx-hud-label">INDEX QUERY // SEARCH</span>
+        </div>
+        <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-toggle-scanlines>FX: Scanline</button>
+      </header>
+
+      <main class="nx-main">
+        <h1 class="nx-mb-4">Search Archive</h1>
+
+        <form class="nx-input-group nx-mb-6" onsubmit="event.preventDefault();">
+          <label for="archive-query" class="nx-sr-only">Search query</label>
+          <input id="archive-query" type="search" class="nx-input" value="cyberpunk neon tokens">
+          <button type="submit" class="nx-btn nx-btn--primary">Query</button>
+        </form>
+
+        <div data-nx-tabs>
+          <div class="nx-tabs__list" role="tablist">
+            <button type="button" class="nx-tab-btn is-active" role="tab" aria-selected="true" data-nx-tab-target="sr-all">All Results (3)</button>
+            <button type="button" class="nx-tab-btn" role="tab" aria-selected="false" data-nx-tab-target="sr-empty">Empty State Demo</button>
+          </div>
+
+          <div class="nx-tab-panel is-active" data-nx-tab-panel="sr-all">
+            <div class="nx-grid nx-gap-4">
+              <article class="nx-card nx-card--interactive">
+                <div class="nx-card__body">
+                  <span class="nx-badge nx-mb-2">CSS TOKENS</span>
+                  <h3><a href="components.html">assets/css/tokens.css — Design Variables</a></h3>
+                  <p class="nx-mb-2">Defines all <code>--nx-cyan</code>, <code>--nx-magenta</code>, and dark obsidian surface tokens.</p>
+                </div>
+              </article>
+
+              <article class="nx-card nx-card--interactive">
+                <div class="nx-card__body">
+                  <span class="nx-badge nx-badge--magenta nx-mb-2">LAYOUT</span>
+                  <h3><a href="dashboard.html">dashboard.html — Telemetry HUD Shell</a></h3>
+                  <p class="nx-mb-2">Responsive sidebar, sticky glass topbar, stat cards, and node activity table.</p>
+                </div>
+              </article>
+
+              <article class="nx-card nx-card--interactive">
+                <div class="nx-card__body">
+                  <span class="nx-badge nx-badge--lime nx-mb-2">DATA</span>
+                  <h3><a href="tables.html">tables.html — Node Registry Grid</a></h3>
+                  <p class="nx-mb-2">Live client-side row filtering, select-all checkboxes, and pagination controls.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="nx-tab-panel" data-nx-tab-panel="sr-empty">
+            <div class="nx-empty-state">
+              <span class="nx-hud-label nx-mb-2">// 0 MATCHES FOUND</span>
+              <h2>No Signals Detected</h2>
+              <p>Try broadening your query or resetting active sector filters.</p>
+              <a href="dashboard.html" class="nx-btn nx-btn--primary">Return to Dashboard</a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

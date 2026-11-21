@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NandX Cyberpunk Neon — HTML Theme Template</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layouts.css">
+</head>
+<body>
+  <header class="nx-navbar">
+    <div class="nx-container nx-navbar__inner">
+      <a href="index.html" class="nx-brand">
+        <span class="nx-dot nx-dot--pulse" aria-hidden="true"></span>
+        <span>NAND<span class="nx-brand__accent">X</span></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <ul class="nx-nav-links">
+          <li><a href="index.html" class="is-active">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="components.html">Components</a></li>
+          <li><a href="tables.html">Tables</a></li>
+          <li><a href="forms.html">Forms</a></li>
+          <li><a href="login.html">Auth</a></li>
+        </ul>
+      </nav>
+      <div class="nx-flex nx-items-center nx-gap-2">
+        <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-toggle-scanlines aria-pressed="false">FX: Scanline</button>
+        <a href="dashboard.html" class="nx-btn nx-btn--primary nx-btn--sm">Launch HUD</a>
+        <button type="button" class="nx-btn nx-btn--ghost nx-btn--icon nx-nav-toggle" data-nx-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation">
+          &#9776;
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-nav" class="nx-mobile-drawer" data-nx-mobile-drawer>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="widgets.html">Widgets</a></li>
+      <li><a href="charts.html">Charts</a></li>
+      <li><a href="tables.html">Tables</a></li>
+      <li><a href="forms.html">Forms</a></li>
+      <li><a href="task-board.html">Task Board</a></li>
+      <li><a href="invoice.html">Invoice</a></li>
+      <li><a href="search-result.html">Search Results</a></li>
+      <li><a href="alerts.html">Alerts</a></li>
+      <li><a href="animations.html">Animations</a></li>
+      <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+      <li><a href="buttons.html">Buttons</a></li>
+      <li><a href="modals.html">Modals</a></li>
+      <li><a href="progress-bar.html">Progress Bars</a></li>
+      <li><a href="components.html">Components UI Kit</a></li>
+      <li><a href="login.html">Login / Register</a></li>
+      <li><a href="profile.html">Operator Profile</a></li>
+      <li><a href="error.html">System Error</a></li>
+      <li><a href="404.html">404 Signal Lost</a></li>
+      <li><a href="500.html">500 Core Overload</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <section class="nx-hero">
+      <div class="nx-container nx-hero__grid">
+        <div>
+          <span class="nx-hud-label nx-mb-4">
+            <span class="nx-dot nx-dot--lime nx-dot--pulse" aria-hidden="true"></span>
+            SYSTEM VERSION 2.0 // FRAMEWORK-AGNOSTIC
+          </span>
+          <h1 class="nx-glitch nx-glitch--auto nx-text-glow-cyan">CYBERPUNK NEON HTML TEMPLATE</h1>
+          <p>
+            A modular, dark-first UI kit and multi-page HTML template engineered with pure CSS tokens,
+            HUD chamfered geometry, and zero build dependencies. Ready to drop into any web app or dashboard.
+          </p>
+          <div class="nx-flex nx-flex-wrap nx-gap-3 nx-mt-6">
+            <a href="dashboard.html" class="nx-btn nx-btn--primary nx-btn--lg">Explore Dashboard</a>
+            <a href="components.html" class="nx-btn nx-btn--magenta nx-btn--lg">View UI Kit</a>
+            <button type="button" class="nx-btn nx-btn--ghost nx-btn--lg" data-nx-toast="Template ready for integration.">Test Toast FX</button>
+          </div>
+        </div>
+
+        <div class="nx-card nx-card--hud">
+          <div class="nx-card__header">
+            <h2 class="nx-card__title">CORE TELEMETRY</h2>
+            <span class="nx-badge nx-badge--lime">ONLINE</span>
+          </div>
+          <div class="nx-card__body">
+            <pre class="nx-code-block"><code>$ nx-theme --init cyberpunk-neon
+[OK] tokens.css loaded (--nx-cyan: #00f0ff)
+[OK] 23 starter pages compiled
+[OK] Zero framework lock-in
+$ status: READY<span class="nx-cursor" aria-hidden="true"></span></code></pre>
+            <div class="nx-grid-2 nx-mt-4">
+              <div class="nx-stat">
+                <span class="nx-stat__label">Starter Pages</span>
+                <span class="nx-stat__value nx-text-cyan">23</span>
+              </div>
+              <div class="nx-stat nx-stat--magenta">
+                <span class="nx-stat__label">Dependencies</span>
+                <span class="nx-stat__value nx-text-magenta">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="nx-section">
+      <div class="nx-container">
+        <span class="nx-hud-label nx-mb-2">// ARCHITECTURE</span>
+        <h2 class="nx-mb-6">Built for Speed &amp; Portability</h2>
+        <div class="nx-grid-3">
+          <article class="nx-card nx-card--interactive">
+            <div class="nx-card__header">
+              <h3 class="nx-card__title">Token-Driven CSS</h3>
+              <span class="nx-badge">--nx-*</span>
+            </div>
+            <div class="nx-card__body">
+              <p>Every surface, neon accent, glow, and spacing token lives in <code>assets/css/tokens.css</code> for instant re-theming.</p>
+            </div>
+          </article>
+
+          <article class="nx-card nx-card--interactive">
+            <div class="nx-card__header">
+              <h3 class="nx-card__title">Accessible Contrast</h3>
+              <span class="nx-badge nx-badge--lime">WCAG AA</span>
+            </div>
+            <div class="nx-card__body">
+              <p>Crisp body text without heavy text-shadow blur, clear <code>:focus-visible</code> rings, and <code>prefers-reduced-motion</code> support.</p>
+            </div>
+          </article>
+
+          <article class="nx-card nx-card--interactive">
+            <div class="nx-card__header">
+              <h3 class="nx-card__title">23 Complete Pages</h3>
+              <span class="nx-badge nx-badge--magenta">HTML5</span>
+            </div>
+            <div class="nx-card__body">
+              <p>Includes Dashboard, Widgets, Charts, Tables, Forms, Kanban, Invoice, Alerts, Modals, Auth, Profile, and Error pages.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="nx-section">
+      <div class="nx-container">
+        <span class="nx-hud-label nx-mb-2">// PAGE DIRECTORY</span>
+        <h2 class="nx-mb-6">All 23 Template Pages</h2>
+        <div class="nx-grid-4">
+          <a href="dashboard.html" class="nx-card nx-card--interactive"><div class="nx-card__body"><strong>dashboard.html</strong><p class="nx-text-muted nx-mt-2">HUD Admin &amp; Telemetry</p></div></a>
+          <a href="widgets.html" class="nx-card nx-card--interactive"><div class="nx-card__body"><strong>widgets.html</strong><p class="nx-text-muted nx-mt-2">KPIs, Sparklines &amp; Gauges</p></div></a>
+          <a href="charts.html" class="nx-card nx-card--interactive"><div class="nx-card__body"><strong>charts.html</strong><p class="nx-text-muted nx-mt-2">Area, Bar &amp; Donut Charts</p></div></a>
+          <a href="tables.html" class="nx-card nx-card--interactive"><div class="nx-card__body"><strong>tables.html</strong><p class="nx-text-muted nx-mt-2">Search, Filters &amp; Grid</p></div></a>
+          <a href="forms.html" class="nx-card nx-card--interactive"><div class="nx-card__body"><strong>forms.html</strong><p class="nx-text-muted nx-mt-2">Inputs, Validation &amp; Upload</p></div></a>
+          <a href="task-board.html" class="nx-card nx-card--interactive"><div class="nx-card__body"><strong>task-board.html</strong><p class="nx-text-muted nx-mt-2">Kanban &amp; Mission Queue</p></div></a>
+          <a href="invoice.html" class="nx-card nx-card--interactive"><div class="nx-card__body"><strong>invoice.html</strong><p class="nx-text-muted nx-mt-2">Billing &amp; Print Layout</p></div></a>
+          <a href="search-result.html" class="nx-card nx-card--interactive"><div class="nx-card__body"><strong>search-result.html</strong><p class="nx-text-muted nx-mt-2">Search &amp; Empty State</p></div></a>
+          <a href="alerts.html" class="nx-card nx-card--interactive"><div class="nx-card__body"><strong>alerts.html</strong><p class="nx-text-muted nx-mt-2">Alerts &amp; Toast FX</p></div></a>
+          <a href="animations.html" class="nx-card nx-card--interactive"><div class="nx-card__body"><strong>animations.html</strong><p class="nx-text-muted nx-mt-2">Glitch, Glow &amp; Micro-FX</p></div></a>
+          <a href="breadcrumbs.html" class="nx-card nx-card--interactive"><div class="nx-card__body"><strong>breadcrumbs.html</strong><p class="nx-text-muted nx-mt-2">HUD Navigation Trails</p></div></a>
+          <a href="buttons.html" class="nx-card nx-card--interactive"><div class="nx-card__body"><strong>buttons.html</strong><p class="nx-text-muted nx-mt-2">Buttons, Groups &amp; Dropdowns</p></div></a>
+          <a href="modals.html" class="nx-card nx-card--interactive"><div class="nx-card__body"><strong>modals.html</strong><p class="nx-text-muted nx-mt-2">Modal Popups &amp; Dialogs</p></div></a>
+          <a href="progress-bar.html" class="nx-card nx-card--interactive"><div class="nx-card__body"><strong>progress-bar.html</strong><p class="nx-text-muted nx-mt-2">Progress Bars &amp; Gauges</p></div></a>
+          <a href="components.html" class="nx-card nx-card--interactive"><div class="nx-card__body"><strong>components.html</strong><p class="nx-text-muted nx-mt-2">Full UI Kit Reference</p></div></a>
+          <a href="login.html" class="nx-card nx-card--interactive"><div class="nx-card__body"><strong>login.html</strong><p class="nx-text-muted nx-mt-2">Login &amp; Register Tabs</p></div></a>
+          <a href="reset-password.html" class="nx-card nx-card--interactive"><div class="nx-card__body"><strong>reset-password.html</strong><p class="nx-text-muted nx-mt-2">Recovery &amp; Lock Screen</p></div></a>
+          <a href="profile.html" class="nx-card nx-card--interactive"><div class="nx-card__body"><strong>profile.html</strong><p class="nx-text-muted nx-mt-2">Operator Profile &amp; Settings</p></div></a>
+          <a href="coming-soon.html" class="nx-card nx-card--interactive"><div class="nx-card__body"><strong>coming-soon.html</strong><p class="nx-text-muted nx-mt-2">Countdown &amp; Maintenance</p></div></a>
+          <a href="error.html" class="nx-card nx-card--interactive"><div class="nx-card__body"><strong>error.html</strong><p class="nx-text-muted nx-mt-2">General System Error</p></div></a>
+          <a href="404.html" class="nx-card nx-card--interactive"><div class="nx-card__body"><strong>404.html</strong><p class="nx-text-muted nx-mt-2">Signal Lost Error Page</p></div></a>
+          <a href="500.html" class="nx-card nx-card--interactive"><div class="nx-card__body"><strong>500.html</strong><p class="nx-text-muted nx-mt-2">Core Overload Error Page</p></div></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="nx-footer">
+    <div class="nx-container nx-flex nx-flex-wrap nx-items-center nx-justify-between nx-gap-4">
+      <span class="nx-mono nx-text-secondary">NANDX CYBERPUNK NEON // HTML THEME TEMPLATE</span>
+      <div class="nx-flex nx-gap-4">
+        <a href="components.html">UI Kit</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="404.html">404</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

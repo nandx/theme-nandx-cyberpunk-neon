@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operator Login — NandX Cyberpunk Neon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layouts.css">
+</head>
+<body>
+  <main class="nx-center-shell">
+    <a href="index.html" class="nx-brand nx-mb-6">
+      <span class="nx-dot nx-dot--pulse" aria-hidden="true"></span>
+      <span>NAND<span class="nx-brand__accent">X</span> AUTH</span>
+    </a>
+
+    <section class="nx-card nx-card--hud nx-auth-card" data-nx-tabs>
+      <div class="nx-card__header">
+        <h1 class="nx-card__title">Operator Access</h1>
+        <span class="nx-badge nx-badge--lime">TLS 1.3</span>
+      </div>
+
+      <div class="nx-card__body">
+        <div class="nx-tabs__list" role="tablist">
+          <button type="button" class="nx-tab-btn is-active" role="tab" aria-selected="true" data-nx-tab-target="auth-login">Sign In</button>
+          <button type="button" class="nx-tab-btn" role="tab" aria-selected="false" data-nx-tab-target="auth-register">Register</button>
+        </div>
+
+        <form class="nx-tab-panel is-active" data-nx-tab-panel="auth-login" action="dashboard.html">
+          <div class="nx-field">
+            <label class="nx-label" for="login-email">Operator Email</label>
+            <input id="login-email" type="email" class="nx-input" placeholder="operator@nandx.io" required>
+          </div>
+          <div class="nx-field">
+            <label class="nx-label" for="login-pass">Passkey</label>
+            <div class="nx-input-group">
+              <input id="login-pass" type="password" class="nx-input" placeholder="••••••••" required>
+              <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-toggle-password="login-pass">SHOW</button>
+            </div>
+          </div>
+          <div class="nx-flex nx-items-center nx-justify-between nx-mb-4">
+            <label class="nx-check"><input type="checkbox" checked> Remember node</label>
+            <a href="reset-password.html" class="nx-mono">Forgot key?</a>
+          </div>
+          <button type="submit" class="nx-btn nx-btn--primary nx-w-full">Authenticate</button>
+        </form>
+
+        <form class="nx-tab-panel" data-nx-tab-panel="auth-register" action="dashboard.html">
+          <div class="nx-field">
+            <label class="nx-label" for="reg-name">Callsign</label>
+            <input id="reg-name" type="text" class="nx-input" placeholder="K. Tanaka" required>
+          </div>
+          <div class="nx-field">
+            <label class="nx-label" for="reg-email">Operator Email</label>
+            <input id="reg-email" type="email" class="nx-input" placeholder="operator@nandx.io" required>
+          </div>
+          <div class="nx-field">
+            <label class="nx-label" for="reg-pass">Passkey</label>
+            <input id="reg-pass" type="password" class="nx-input" placeholder="Min 12 chars" required>
+          </div>
+          <button type="submit" class="nx-btn nx-btn--magenta nx-w-full">Create Operator ID</button>
+        </form>
+      </div>
+    </section>
+
+    <p class="nx-mt-4 nx-mono"><a href="index.html">&larr; Back to Home</a></p>
+  </main>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

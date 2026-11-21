@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon — NandX Cyberpunk Neon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layouts.css">
+</head>
+<body>
+  <main class="nx-center-shell">
+    <div class="nx-container">
+      <section class="nx-card nx-card--hud">
+        <div class="nx-card__header">
+          <span class="nx-hud-label"><span class="nx-dot nx-dot--amber nx-dot--pulse" aria-hidden="true"></span> SECTOR UPGRADE IN PROGRESS</span>
+          <span class="nx-badge nx-badge--amber">MAINTENANCE</span>
+        </div>
+        <div class="nx-card__body">
+          <h1 class="nx-glitch nx-text-glow-cyan">NEXT-GEN NODE DEPLOYMENT</h1>
+          <p>We are calibrating the Neo-Tokyo v3 telemetry grid. System access will resume automatically when the countdown completes.</p>
+
+          <div class="nx-countdown nx-mt-6 nx-mb-6" data-nx-countdown>
+            <div class="nx-countdown__box">
+              <span class="nx-countdown__num" data-nx-cd="days">14</span>
+              <span class="nx-mono nx-text-secondary">DAYS</span>
+            </div>
+            <div class="nx-countdown__box">
+              <span class="nx-countdown__num" data-nx-cd="hours">00</span>
+              <span class="nx-mono nx-text-secondary">HOURS</span>
+            </div>
+            <div class="nx-countdown__box">
+              <span class="nx-countdown__num" data-nx-cd="mins">00</span>
+              <span class="nx-mono nx-text-secondary">MINS</span>
+            </div>
+            <div class="nx-countdown__box">
+              <span class="nx-countdown__num" data-nx-cd="secs">00</span>
+              <span class="nx-mono nx-text-secondary">SECS</span>
+            </div>
+          </div>
+
+          <form class="nx-input-group" onsubmit="event.preventDefault();">
+            <label for="notify-email" class="nx-sr-only">Email for launch notification</label>
+            <input id="notify-email" type="email" class="nx-input" placeholder="operator@nandx.io" required>
+            <button type="submit" class="nx-btn nx-btn--primary" data-nx-toast="Subscribed to launch signal.">Notify Me</button>
+          </form>
+        </div>
+        <div class="nx-card__footer">
+          <a href="index.html" class="nx-mono">&larr; Return to Home</a>
+          <a href="dashboard.html" class="nx-mono">Open Dashboard &rarr;</a>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

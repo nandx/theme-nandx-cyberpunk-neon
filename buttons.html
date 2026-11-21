@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buttons — NandX Cyberpunk Neon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layouts.css">
+</head>
+<body>
+  <div class="nx-app">
+    <aside class="nx-sidebar" data-nx-sidebar aria-label="Dashboard navigation">
+      <a href="index.html" class="nx-brand"><span class="nx-dot nx-dot--pulse" aria-hidden="true"></span><span>NAND<span class="nx-brand__accent">X</span> HUD</span></a>
+      <div class="nx-sidebar__group">
+        <div class="nx-sidebar__title">Core</div>
+        <ul class="nx-sidebar__nav">
+          <li><a href="dashboard.html" class="nx-sidebar__link">Dashboard</a></li>
+          <li><a href="widgets.html" class="nx-sidebar__link">Widgets</a></li>
+          <li><a href="charts.html" class="nx-sidebar__link">Charts</a></li>
+          <li><a href="tables.html" class="nx-sidebar__link">Data Tables</a></li>
+          <li><a href="forms.html" class="nx-sidebar__link">Forms</a></li>
+          <li><a href="task-board.html" class="nx-sidebar__link">Task Board</a></li>
+        </ul>
+      </div>
+      <div class="nx-sidebar__group">
+        <div class="nx-sidebar__title">Operations</div>
+        <ul class="nx-sidebar__nav">
+          <li><a href="invoice.html" class="nx-sidebar__link">Invoice</a></li>
+          <li><a href="search-result.html" class="nx-sidebar__link">Search Results</a></li>
+          <li><a href="alerts.html" class="nx-sidebar__link">Alerts</a></li>
+          <li><a href="animations.html" class="nx-sidebar__link">Animations</a></li>
+          <li><a href="breadcrumbs.html" class="nx-sidebar__link">Breadcrumbs</a></li>
+          <li><a href="buttons.html" class="nx-sidebar__link is-active">Buttons</a></li>
+          <li><a href="modals.html" class="nx-sidebar__link">Modals</a></li>
+          <li><a href="progress-bar.html" class="nx-sidebar__link">Progress Bars</a></li>
+          <li><a href="components.html" class="nx-sidebar__link">UI Kit</a></li>
+        </ul>
+      </div>
+      <div class="nx-sidebar__group">
+        <div class="nx-sidebar__title">Account &amp; System</div>
+        <ul class="nx-sidebar__nav">
+          <li><a href="profile.html" class="nx-sidebar__link">Profile</a></li>
+          <li><a href="login.html" class="nx-sidebar__link">Login</a></li>
+          <li><a href="reset-password.html" class="nx-sidebar__link">Reset Password</a></li>
+          <li><a href="coming-soon.html" class="nx-sidebar__link">Coming Soon</a></li>
+          <li><a href="error.html" class="nx-sidebar__link">Error Page</a></li>
+          <li><a href="404.html" class="nx-sidebar__link">404 Error</a></li>
+          <li><a href="500.html" class="nx-sidebar__link">500 Error</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="nx-app__content">
+      <header class="nx-topbar">
+        <div class="nx-flex nx-items-center nx-gap-3">
+          <button type="button" class="nx-btn nx-btn--ghost nx-btn--icon nx-sidebar-toggle" data-nx-sidebar-toggle aria-expanded="false" aria-label="Toggle sidebar">&#9776;</button>
+          <span class="nx-hud-label">CONTROLS // BUTTONS</span>
+        </div>
+        <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-toggle-scanlines>FX: Scanline</button>
+      </header>
+
+      <main class="nx-main">
+        <ul class="nx-breadcrumb">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li aria-current="page">Buttons</li>
+        </ul>
+
+        <h1 class="nx-mb-2">Cyberpunk Buttons</h1>
+        <p class="nx-mb-6">Chamfered HUD buttons, color variants, sizes, icon controls, button groups, and dropdown triggers.</p>
+
+        <div class="nx-grid nx-gap-6">
+          <section class="nx-card">
+            <div class="nx-card__header"><h2 class="nx-card__title">Color Variants</h2></div>
+            <div class="nx-card__body nx-flex nx-flex-wrap nx-gap-3">
+              <button type="button" class="nx-btn nx-btn--primary">Primary Cyan</button>
+              <button type="button" class="nx-btn">Default Neon</button>
+              <button type="button" class="nx-btn nx-btn--magenta">Magenta</button>
+              <button type="button" class="nx-btn nx-btn--ghost">Ghost HUD</button>
+              <button type="button" class="nx-btn nx-btn--danger">Danger</button>
+            </div>
+          </section>
+
+          <section class="nx-grid-2">
+            <div class="nx-card">
+              <div class="nx-card__header"><h2 class="nx-card__title">Sizes &amp; Icon Buttons</h2></div>
+              <div class="nx-card__body nx-flex nx-flex-wrap nx-items-center nx-gap-3">
+                <button type="button" class="nx-btn nx-btn--primary nx-btn--sm">Small</button>
+                <button type="button" class="nx-btn nx-btn--primary">Default</button>
+                <button type="button" class="nx-btn nx-btn--primary nx-btn--lg">Large</button>
+                <button type="button" class="nx-btn nx-btn--icon" aria-label="Settings">&#9881;</button>
+                <button type="button" class="nx-btn nx-btn--magenta nx-btn--icon" aria-label="Power">&#9889;</button>
+              </div>
+            </div>
+
+            <div class="nx-card">
+              <div class="nx-card__header"><h2 class="nx-card__title">Disabled States</h2></div>
+              <div class="nx-card__body nx-flex nx-flex-wrap nx-gap-3">
+                <button type="button" class="nx-btn nx-btn--primary" disabled>Primary Disabled</button>
+                <button type="button" class="nx-btn nx-btn--magenta" disabled>Magenta Disabled</button>
+                <button type="button" class="nx-btn nx-btn--ghost" disabled>Ghost Disabled</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="nx-grid-2">
+            <div class="nx-card">
+              <div class="nx-card__header"><h2 class="nx-card__title">Button Groups &amp; Dropdowns</h2></div>
+              <div class="nx-card__body nx-flex nx-flex-wrap nx-items-center nx-gap-4">
+                <div class="nx-btn-group" role="group" aria-label="Time range">
+                  <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm">1H</button>
+                  <button type="button" class="nx-btn nx-btn--sm">24H</button>
+                  <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm">7D</button>
+                  <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm">30D</button>
+                </div>
+
+                <div class="nx-dropdown">
+                  <button type="button" class="nx-btn nx-btn--magenta nx-btn--sm" data-nx-dropdown-toggle aria-expanded="false">Node Actions &#9662;</button>
+                  <div class="nx-dropdown__menu" role="menu">
+                    <button type="button" class="nx-dropdown__item" role="menuitem" data-nx-toast="Node restarted.">Restart Node</button>
+                    <button type="button" class="nx-dropdown__item" role="menuitem" data-nx-toast="Logs exported.">Export Logs</button>
+                    <button type="button" class="nx-dropdown__item" role="menuitem" data-nx-toast="Cache cleared.">Clear Cache</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="nx-card">
+              <div class="nx-card__header"><h2 class="nx-card__title">Full-Width Block Buttons</h2></div>
+              <div class="nx-card__body nx-grid nx-gap-3">
+                <button type="button" class="nx-btn nx-btn--primary nx-w-full" data-nx-toast="Full-width primary clicked.">Full-Width Primary</button>
+                <button type="button" class="nx-btn nx-btn--ghost nx-w-full" data-nx-toast="Full-width ghost clicked.">Full-Width Ghost</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

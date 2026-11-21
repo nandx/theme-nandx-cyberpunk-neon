@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Widgets &amp; Gauges — NandX Cyberpunk Neon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layouts.css">
+</head>
+<body>
+  <div class="nx-app">
+    <aside class="nx-sidebar" data-nx-sidebar aria-label="Dashboard navigation">
+      <a href="index.html" class="nx-brand"><span class="nx-dot nx-dot--pulse" aria-hidden="true"></span><span>NAND<span class="nx-brand__accent">X</span> HUD</span></a>
+      <div class="nx-sidebar__group">
+        <div class="nx-sidebar__title">Core</div>
+        <ul class="nx-sidebar__nav">
+          <li><a href="dashboard.html" class="nx-sidebar__link">Dashboard</a></li>
+          <li><a href="widgets.html" class="nx-sidebar__link is-active">Widgets</a></li>
+          <li><a href="charts.html" class="nx-sidebar__link">Charts</a></li>
+          <li><a href="tables.html" class="nx-sidebar__link">Data Tables</a></li>
+          <li><a href="forms.html" class="nx-sidebar__link">Forms</a></li>
+          <li><a href="task-board.html" class="nx-sidebar__link">Task Board</a></li>
+        </ul>
+      </div>
+      <div class="nx-sidebar__group">
+        <div class="nx-sidebar__title">Operations</div>
+        <ul class="nx-sidebar__nav">
+          <li><a href="invoice.html" class="nx-sidebar__link">Invoice</a></li>
+          <li><a href="search-result.html" class="nx-sidebar__link">Search Results</a></li>
+          <li><a href="alerts.html" class="nx-sidebar__link">Alerts</a></li>
+          <li><a href="animations.html" class="nx-sidebar__link">Animations</a></li>
+          <li><a href="breadcrumbs.html" class="nx-sidebar__link">Breadcrumbs</a></li>
+          <li><a href="buttons.html" class="nx-sidebar__link">Buttons</a></li>
+          <li><a href="modals.html" class="nx-sidebar__link">Modals</a></li>
+          <li><a href="progress-bar.html" class="nx-sidebar__link">Progress Bars</a></li>
+          <li><a href="components.html" class="nx-sidebar__link">UI Kit</a></li>
+        </ul>
+      </div>
+      <div class="nx-sidebar__group">
+        <div class="nx-sidebar__title">Account &amp; System</div>
+        <ul class="nx-sidebar__nav">
+          <li><a href="profile.html" class="nx-sidebar__link">Profile</a></li>
+          <li><a href="login.html" class="nx-sidebar__link">Login</a></li>
+          <li><a href="reset-password.html" class="nx-sidebar__link">Reset Password</a></li>
+          <li><a href="coming-soon.html" class="nx-sidebar__link">Coming Soon</a></li>
+          <li><a href="error.html" class="nx-sidebar__link">Error Page</a></li>
+          <li><a href="404.html" class="nx-sidebar__link">404 Error</a></li>
+          <li><a href="500.html" class="nx-sidebar__link">500 Error</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="nx-app__content">
+      <header class="nx-topbar">
+        <div class="nx-flex nx-items-center nx-gap-3">
+          <button type="button" class="nx-btn nx-btn--ghost nx-btn--icon nx-sidebar-toggle" data-nx-sidebar-toggle aria-expanded="false" aria-label="Toggle sidebar">&#9776;</button>
+          <span class="nx-hud-label">KPI WIDGETS // PURE SVG</span>
+        </div>
+        <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-toggle-scanlines>FX: Scanline</button>
+      </header>
+
+      <main class="nx-main">
+        <h1 class="nx-mb-2">Telemetry Widgets</h1>
+        <p class="nx-mb-6">Lightweight radial gauges, SVG sparklines, and status feeds without external chart libraries.</p>
+
+        <section class="nx-grid-3 nx-mb-6">
+          <div class="nx-card">
+            <div class="nx-card__header"><h2 class="nx-card__title">Core Load</h2><span class="nx-badge">CPU</span></div>
+            <div class="nx-card__body nx-flex nx-items-center nx-gap-4">
+              <div class="nx-gauge">
+                <svg width="112" height="112" viewBox="0 0 112 112" aria-hidden="true">
+                  <circle class="nx-gauge__track" cx="56" cy="56" r="46"></circle>
+                  <circle class="nx-gauge__fill" cx="56" cy="56" r="46" stroke-dasharray="289" stroke-dashoffset="64"></circle>
+                </svg>
+                <span class="nx-gauge__value nx-text-cyan">78%</span>
+              </div>
+              <div>
+                <p class="nx-mb-2"><strong>32-Core Array</strong></p>
+                <span class="nx-mono nx-text-secondary">4.82 GHz Boost</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="nx-card">
+            <div class="nx-card__header"><h2 class="nx-card__title">Firewall Shield</h2><span class="nx-badge nx-badge--magenta">SEC</span></div>
+            <div class="nx-card__body nx-flex nx-items-center nx-gap-4">
+              <div class="nx-gauge">
+                <svg width="112" height="112" viewBox="0 0 112 112" aria-hidden="true">
+                  <circle class="nx-gauge__track" cx="56" cy="56" r="46"></circle>
+                  <circle class="nx-gauge__fill nx-gauge__fill--magenta" cx="56" cy="56" r="46" stroke-dasharray="289" stroke-dashoffset="26"></circle>
+                </svg>
+                <span class="nx-gauge__value nx-text-magenta">91%</span>
+              </div>
+              <div>
+                <p class="nx-mb-2"><strong>Zero-Trust Mesh</strong></p>
+                <span class="nx-mono nx-text-secondary">0 Intrusions</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="nx-card">
+            <div class="nx-card__header"><h2 class="nx-card__title">Throughput</h2><span class="nx-badge nx-badge--lime">NET</span></div>
+            <div class="nx-card__body">
+              <span class="nx-stat__value nx-text-lime">8.4 Gbps</span>
+              <svg class="nx-mt-4" viewBox="0 0 240 60" width="100%" height="60" aria-label="Network throughput sparkline">
+                <polyline fill="none" stroke="#39ff14" stroke-width="2.5" points="0,48 30,40 60,44 90,22 120,28 150,14 180,20 210,8 240,12"></polyline>
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        <section class="nx-card">
+          <div class="nx-card__header"><h2 class="nx-card__title">Live Event Feed</h2></div>
+          <div class="nx-card__body">
+            <ul class="nx-timeline">
+              <li class="nx-timeline__item">
+                <span class="nx-timeline__time">17:55:12</span>
+                <p>Auto-scaled worker pool to 16 instances.</p>
+              </li>
+              <li class="nx-timeline__item">
+                <span class="nx-timeline__time">17:48:03</span>
+                <p>SSL certificate rotated for <code>api.nandx.io</code>.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

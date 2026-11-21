@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breadcrumbs — NandX Cyberpunk Neon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layouts.css">
+</head>
+<body>
+  <div class="nx-app">
+    <aside class="nx-sidebar" data-nx-sidebar aria-label="Dashboard navigation">
+      <a href="index.html" class="nx-brand"><span class="nx-dot nx-dot--pulse" aria-hidden="true"></span><span>NAND<span class="nx-brand__accent">X</span> HUD</span></a>
+      <div class="nx-sidebar__group">
+        <div class="nx-sidebar__title">Core</div>
+        <ul class="nx-sidebar__nav">
+          <li><a href="dashboard.html" class="nx-sidebar__link">Dashboard</a></li>
+          <li><a href="widgets.html" class="nx-sidebar__link">Widgets</a></li>
+          <li><a href="charts.html" class="nx-sidebar__link">Charts</a></li>
+          <li><a href="tables.html" class="nx-sidebar__link">Data Tables</a></li>
+          <li><a href="forms.html" class="nx-sidebar__link">Forms</a></li>
+          <li><a href="task-board.html" class="nx-sidebar__link">Task Board</a></li>
+        </ul>
+      </div>
+      <div class="nx-sidebar__group">
+        <div class="nx-sidebar__title">Operations</div>
+        <ul class="nx-sidebar__nav">
+          <li><a href="invoice.html" class="nx-sidebar__link">Invoice</a></li>
+          <li><a href="search-result.html" class="nx-sidebar__link">Search Results</a></li>
+          <li><a href="alerts.html" class="nx-sidebar__link">Alerts</a></li>
+          <li><a href="animations.html" class="nx-sidebar__link">Animations</a></li>
+          <li><a href="breadcrumbs.html" class="nx-sidebar__link is-active">Breadcrumbs</a></li>
+          <li><a href="buttons.html" class="nx-sidebar__link">Buttons</a></li>
+          <li><a href="modals.html" class="nx-sidebar__link">Modals</a></li>
+          <li><a href="progress-bar.html" class="nx-sidebar__link">Progress Bars</a></li>
+          <li><a href="components.html" class="nx-sidebar__link">UI Kit</a></li>
+        </ul>
+      </div>
+      <div class="nx-sidebar__group">
+        <div class="nx-sidebar__title">Account &amp; System</div>
+        <ul class="nx-sidebar__nav">
+          <li><a href="profile.html" class="nx-sidebar__link">Profile</a></li>
+          <li><a href="login.html" class="nx-sidebar__link">Login</a></li>
+          <li><a href="reset-password.html" class="nx-sidebar__link">Reset Password</a></li>
+          <li><a href="coming-soon.html" class="nx-sidebar__link">Coming Soon</a></li>
+          <li><a href="error.html" class="nx-sidebar__link">Error Page</a></li>
+          <li><a href="404.html" class="nx-sidebar__link">404 Error</a></li>
+          <li><a href="500.html" class="nx-sidebar__link">500 Error</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="nx-app__content">
+      <header class="nx-topbar">
+        <div class="nx-flex nx-items-center nx-gap-3">
+          <button type="button" class="nx-btn nx-btn--ghost nx-btn--icon nx-sidebar-toggle" data-nx-sidebar-toggle aria-expanded="false" aria-label="Toggle sidebar">&#9776;</button>
+          <span class="nx-hud-label">NAVIGATION // BREADCRUMBS</span>
+        </div>
+        <button type="button" class="nx-btn nx-btn--ghost nx-btn--sm" data-nx-toggle-scanlines>FX: Scanline</button>
+      </header>
+
+      <main class="nx-main">
+        <ul class="nx-breadcrumb">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="components.html">UI Kit</a></li>
+          <li aria-current="page">Breadcrumbs</li>
+        </ul>
+
+        <h1 class="nx-mb-2">Breadcrumbs &amp; HUD Trails</h1>
+        <p class="nx-mb-6">Hierarchical navigation trails for deep admin views, settings, and sector paths.</p>
+
+        <div class="nx-grid nx-gap-6">
+          <section class="nx-card">
+            <div class="nx-card__header"><h2 class="nx-card__title">Default Slash Breadcrumb</h2></div>
+            <div class="nx-card__body">
+              <nav aria-label="Default breadcrumb">
+                <ul class="nx-breadcrumb">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="dashboard.html">Dashboard</a></li>
+                  <li><a href="tables.html">Nodes</a></li>
+                  <li aria-current="page">NX-041</li>
+                </ul>
+              </nav>
+            </div>
+          </section>
+
+          <section class="nx-card">
+            <div class="nx-card__header"><h2 class="nx-card__title">Magenta Arrow Breadcrumb</h2></div>
+            <div class="nx-card__body">
+              <nav aria-label="Arrow breadcrumb">
+                <ul class="nx-breadcrumb nx-breadcrumb--arrow">
+                  <li><a href="index.html">Sector 09</a></li>
+                  <li><a href="dashboard.html">Clusters</a></li>
+                  <li><a href="widgets.html">Neo-Tokyo</a></li>
+                  <li aria-current="page">Telemetry</li>
+                </ul>
+              </nav>
+            </div>
+          </section>
+
+          <section class="nx-card">
+            <div class="nx-card__header"><h2 class="nx-card__title">HUD Boxed Breadcrumb</h2></div>
+            <div class="nx-card__body">
+              <nav aria-label="HUD boxed breadcrumb">
+                <ul class="nx-breadcrumb nx-breadcrumb--hud">
+                  <li><a href="index.html">Root</a></li>
+                  <li><a href="profile.html">Operator</a></li>
+                  <li><a href="forms.html">Security</a></li>
+                  <li aria-current="page">Hardware Keys</li>
+                </ul>
+              </nav>
+            </div>
+          </section>
+
+          <section class="nx-card nx-card--hud">
+            <div class="nx-card__body nx-flex nx-flex-wrap nx-items-center nx-justify-between nx-gap-4">
+              <div>
+                <h2 class="nx-mb-2">Page Header with Breadcrumb</h2>
+                <nav aria-label="Header breadcrumb">
+                  <ul class="nx-breadcrumb">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="task-board.html">Missions</a></li>
+                    <li aria-current="page">Sprint #14</li>
+                  </ul>
+                </nav>
+              </div>
+              <a href="task-board.html" class="nx-btn nx-btn--primary nx-btn--sm">Open Board</a>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
